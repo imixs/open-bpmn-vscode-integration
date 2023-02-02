@@ -17,6 +17,10 @@
     "upgrade:next": "yarn upgrade -p \"@eclipse-glsp.*|sprotty.*\" --next ",
     "watch": "lerna run --parallel watch"
   },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
     "@eclipse-glsp/config": "1.1.0-next.e31f2e5.119",
     "@eclipse-glsp/config-test": "1.1.0-next.e31f2e5.119",
@@ -24,11 +28,8 @@
     "@types/vscode": "^1.54.0",
     "mvn-artifact-download": "5.1.0"
   },
-  "resolutions": {
-    "**/sprotty": "0.13.0-next.f4445dd.342"
-  },
   "workspaces": [
     "packages/*/",
-    "example/workflow/*"
+    "open-bpmn.vscode/*"
   ]
 }
