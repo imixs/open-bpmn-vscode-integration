@@ -1,0 +1,42 @@
+{
+  // Use IntelliSense to learn about possible Node.js debug attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Open-BPMN GLSP Example Extension",
+      "type": "extensionHost",
+      "request": "launch",
+      "runtimeExecutable": "${execPath}",
+      "args": [
+        "${workspaceFolder}/open-bpmn.vscode/workspace",
+        "--extensionDevelopmentPath=${workspaceFolder}/open-bpmn.vscode/extension"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/open-bpmn.vscode/extension/lib/*.js",
+        "${workspaceFolder}/vscode-integration/lib/**/*.js"
+      ],
+      "sourceMaps": true
+    },
+    {
+      "name": "Open-BPMN GLSP Example Extension (External GLSP Server)",
+      "type": "extensionHost",
+      "request": "launch",
+      "runtimeExecutable": "${execPath}",
+      "args": [
+        "${workspaceFolder}/open-bpmn.vscode/workspace",
+        "--extensionDevelopmentPath=${workspaceFolder}/open-bpmn.vscode/extension"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/open-bpmn.vscode/extension/lib/*.js",
+        "${workspaceFolder}/vscode-integration/lib/**/*.js"
+      ],
+      "sourceMaps": true,
+      "env": {
+        "GLSP_SERVER_DEBUG": "true",
+        "GLSP_SERVER_PORT": "5007"
+      }
+    }
+  ]
+}

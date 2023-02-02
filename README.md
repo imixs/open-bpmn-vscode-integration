@@ -1,1 +1,44 @@
-# open-bpmn-vscode-integration
+# Open-BPMN VS-Code Integration
+
+Find GLSP Example [here](https://github.com/eclipse-glsp/glsp-vscode-integration)
+
+	$ cd eclipse-2022-09/open-bpmn/vscode-test-bpmn/
+	$ yarn install
+
+
+## Dependencies
+
+Because of the integration of `@jsonforms/vanilla-renderers` we need to add the dependencies of react ^18.2.0
+
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },  	
+  
+  
+  
+## Server Configuration
+
+The directory `extension/server/` holds the Open-BPMN server jar. The server is needed to be launched within the VS-Code configuration. The setup for the server is defined in `extension/src/server-config.json`. The jar file version is resolved by the configuration params. 
+
+See the following example: 
+
+	{
+	    "releaseRepository": "https://repo1.maven.org/maven2/",
+	    "snapshotRepository": "https://oss.sonatype.org/content/repositories/snapshots/",
+	    "groupId": "org.imixs.bpmn",
+	    "artifactId": "open-bpmn.server",
+	    "version": "0.8.0",
+	    "isSnapShot": false,
+	    "classifier": "glsp"
+	}
+ 
+This server configuration will resolve to the server jar file:
+ 
+	open-bpmn.server-0.8.0-glsp.jar
+
+The server version is also located in the Maven Central Repository:
+
+	https://repo1.maven.org/maven2/org/imixs/bpmn/open-bpmn.server/0.8.0/
+	
+  
