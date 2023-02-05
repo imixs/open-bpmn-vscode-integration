@@ -28,6 +28,9 @@
     "@types/vscode": "^1.54.0",
     "mvn-artifact-download": "5.1.0"
   },
+  "resolutions": {
+    "**/sprotty": "0.13.0-next.f4445dd.342"
+  },  
   "workspaces": [
     "packages/*/",
     "open-bpmn.vscode/*"
