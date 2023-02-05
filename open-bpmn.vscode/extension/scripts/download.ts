@@ -26,14 +26,14 @@ const serverExecutable = `${__dirname}/../extension/server/${artifactId}-${versi
 if (fs.existsSync(serverExecutable)) {
     fs.unlinkSync(serverExecutable);
 }
-console.log('Downloading latest version of the Workflow Example Java Server from the maven repository...');
+console.log('Downloading latest version of the Open-BPMN Java Server from the maven repository...');
 download({ groupId, artifactId, version, classifier, isSnapShot }, downloadDir, mavenRepository)
     .then(() =>
         console.log(
-            'Download completed. Start the server using this command: \njava -jar org.eclipse.glsp.example.workflow-' +
+            'Download completed. Start the server using this command: \njava -jar org-bpmn-server-' +
                 version +
                 `${isSnapShot ? '-SNAPSHOT' : ''}` +
-                '-glsp.jar org.eclipse.glsp.example.workflow.launch.ExampleServerLauncher\n\n'
+                '-glsp.jar org.openbpmn.glsp.BPMNServerLauncher\n\n'
         )
     )
     .catch(err => console.error(err));

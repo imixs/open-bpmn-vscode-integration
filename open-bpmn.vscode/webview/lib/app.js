@@ -16,16 +16,17 @@ exports.launch = void 0;
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-const workflow_glsp_1 = require("@eclipse-glsp-examples/workflow-glsp");
+// import { createWorkflowDiagramContainer } from '@eclipse-glsp-examples/workflow-glsp';
+const open_bpmn_glsp_1 = require("@open-bpmn/open-bpmn-glsp");
 const vscode_integration_webview_1 = require("@eclipse-glsp/vscode-integration-webview");
 require("@eclipse-glsp/vscode-integration-webview/css/glsp-vscode.css");
-class WorkflowGLSPStarter extends vscode_integration_webview_1.GLSPStarter {
+class BPMNGLSPStarter extends vscode_integration_webview_1.GLSPStarter {
     createContainer(diagramIdentifier) {
-        return (0, workflow_glsp_1.createWorkflowDiagramContainer)(diagramIdentifier.clientId);
+        return (0, open_bpmn_glsp_1.createBPMNDiagramContainer)(diagramIdentifier.clientId);
     }
 }
 function launch() {
-    new WorkflowGLSPStarter();
+    new BPMNGLSPStarter();
 }
 exports.launch = launch;
 //# sourceMappingURL=app.js.map

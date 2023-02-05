@@ -2,23 +2,23 @@
   "name": "open-bpmn-vscode-extension",
   "private": "true",
   "version": "0.8.0",
-  "description": "An example graphical language used for modeling workflows",
-  "displayName": "Workflow GLSP Example",
-  "publisher": "Eclipse-GLSP",
-  "homepage": "https://www.eclipse.org/glsp/",
-  "bugs": "https://github.com/eclipse-glsp/glsp/issues",
+  "description": "VS-Code Integration for Open-BPMN",
+  "displayName": "Open-BPMN VSCode Integration",
+  "publisher": "Imixs-Workflow",
+  "homepage": "https://github.com/imixs/open-bpmn-vscode-integration/",
+  "bugs": "https://github.com/imixs/open-bpmn-vscode-integration/issues",
   "author": {
-    "name": "EclipseGLSP"
+    "name": "Imixs-Workflow"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eclipse-glsp/glsp-vscode-integration.git"
+    "url": "https://github.com/imixs/open-bpmn-vscode-integration.git"
   },
   "contributors": [
     {
-      "name": "Eclipse GLSP Project",
-      "email": "glsp-dev@eclipse.org",
-      "url": "https://projects.eclipse.org/projects/ecd.glsp"
+      "name": "Imixs-Workflow Project",
+      "email": "info@imixs.com",
+      "url": "https://github.com/imixs/open-bpmn/"
     }
   ],
   "categories": [
@@ -30,11 +30,11 @@
   "contributes": {
     "customEditors": [
       {
-        "viewType": "workflow.glspDiagram",
-        "displayName": "Workflow Diagram Editor",
+        "viewType": "bpmn-diagram",
+        "displayName": "BPMN 2.0 Diagram Editor",
         "selector": [
           {
-            "filenamePattern": "*.wf"
+            "filenamePattern": "*.bpmn"
           }
         ]
       }

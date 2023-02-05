@@ -15,7 +15,7 @@
  ********************************************************************************/
 import 'reflect-metadata';
 import * as vscode from 'vscode';
-import { activate as extensionActivate } from './workflow-extension';
+import { activate as extensionActivate } from './open-bpmn-extension';
 
 export function activate(context: vscode.ExtensionContext): Promise<void> {
     return extensionActivate(context);

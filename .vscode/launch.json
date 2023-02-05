@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Open-BPMN GLSP Example Extension",
+      "name": "Open-BPMN GLSP Extension",
       "type": "extensionHost",
       "request": "launch",
       "runtimeExecutable": "${execPath}",
@@ -20,7 +20,7 @@
       "sourceMaps": true
     },
     {
-      "name": "Open-BPMN GLSP Example Extension (External GLSP Server)",
+      "name": "Open-BPMN GLSP Extension (External GLSP Server)",
       "type": "extensionHost",
       "request": "launch",
       "runtimeExecutable": "${execPath}",

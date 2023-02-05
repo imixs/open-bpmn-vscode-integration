@@ -17,9 +17,9 @@ exports.activate = void 0;
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
 require("reflect-metadata");
-const workflow_extension_1 = require("./workflow-extension");
+const open_bpmn_extension_1 = require("./open-bpmn-extension");
 function activate(context) {
-    return (0, workflow_extension_1.activate)(context);
+    return (0, open_bpmn_extension_1.activate)(context);
 }
 exports.activate = activate;
 //# sourceMappingURL=index.js.map

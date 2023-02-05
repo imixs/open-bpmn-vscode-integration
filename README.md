@@ -40,5 +40,41 @@ This server configuration will resolve to the server jar file:
 The server version is also located in the Maven Central Repository:
 
 	https://repo1.maven.org/maven2/org/imixs/bpmn/open-bpmn.server/0.8.0/
+
+
+## Client Configuration
+
+On the client side some settings are important.
+
+On OpenBPMN we define the following settings:
+
+	    contributionId: 'Bpmn',
+	    label: 'BPMN 2.0 diagram',
+	    diagramType: 'bpmn-diagram',
+	    fileExtensions: ['.bpmn','.bpmn2']
+
+**viewType**
+
+In the `package.json` file of the extension package take care about the setting of the `viewType`. This setting reflects the view type defined on the server side
+
+	bpmn-diagram
 	
-  
+**ACHTUNG** Wir haben ind er package.json datei
+
+        "viewType": "workflow.glspDiagram",
+        
+mit 
+
+	        "viewType": "bpmn-diagram",
+	        
+Ausgetauscht !!!!!!!!	
+
+This should be equal to the diagramtype - see follwoing section
+
+** diagramType **
+
+DiagramType  - see BPMNDiagramModule.getDiagramType()
+	
+It is also Define in the bpmn-language.ts file 
+
+	diagramType: 'bpmn-diagram',

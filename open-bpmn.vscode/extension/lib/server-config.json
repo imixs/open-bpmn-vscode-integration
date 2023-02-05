@@ -1,9 +1,9 @@
 {
     "releaseRepository": "https://repo1.maven.org/maven2/",
     "snapshotRepository": "https://oss.sonatype.org/content/repositories/snapshots/",
-    "groupId": "org.eclipse.glsp.example",
-    "artifactId": "org.eclipse.glsp.example.workflow",
-    "version": "1.1.0",
+    "groupId": "org.imixs.bpmn",
+    "artifactId": "open-bpmn.server",
+    "version": "0.8.1",
     "isSnapShot": true,
     "classifier": "glsp"
 }

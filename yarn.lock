@@ -202,29 +202,12 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
-"@eclipse-glsp-examples/workflow-glsp@next":
-  version "1.1.0-next.26bf120.222"
-  resolved "https://registry.yarnpkg.com/@eclipse-glsp-examples/workflow-glsp/-/workflow-glsp-1.1.0-next.26bf120.222.tgz#de2a2c17557fd077bdd1af4ab4f8c6128258f3d0"
-  integrity sha512-KU2Xv9YY63CzZb5hCkbqJQseol4zC6Jm7LEBlfZS1iP1mA8gJ31ICoSpYT5ULWed6DYUBDnRFzQzB8/crJ6gWA==
-  dependencies:
-    "@eclipse-glsp/client" "1.1.0-next.26bf120.222+26bf120"
-    balloon-css "^0.5.0"
-
 "@eclipse-glsp/client@1.1.0-RC04":
   version "1.1.0-RC04"
   resolved "https://registry.yarnpkg.com/@eclipse-glsp/client/-/client-1.1.0-RC04.tgz#47203752b97ab48026cfa61010e3281a26dbfecc"
   integrity sha512-/apRDV0HGmGQPf4wy2SjzfTV4C7JX1RQAetJXu0FXq7l/l1rNsT/IVsIP9GSuJ6yYf+PttEYzLNv8hIOIPIYtw==
   dependencies:
     "@eclipse-glsp/protocol" "1.1.0-RC04"
-    autocompleter "5.1.0"
-    sprotty "0.13.0-next.f4445dd.342"
-
-"@eclipse-glsp/client@1.1.0-next.26bf120.222+26bf120":
-  version "1.1.0-next.26bf120.222"
-  resolved "https://registry.yarnpkg.com/@eclipse-glsp/client/-/client-1.1.0-next.26bf120.222.tgz#33aa2cb2fe4fa4558f5ad77d2b5c3aa58e42b955"
-  integrity sha512-RMPNJAWBK2b1Gp5yMFMHcPYQDkbnF828OWNrb0wqf37BCAFN4wqCk2jvYb11Bpl7PUc0mdjl96z0LQcugbeRKQ==
-  dependencies:
-    "@eclipse-glsp/protocol" "1.1.0-next.26bf120.222+26bf120"
     autocompleter "5.1.0"
     sprotty "0.13.0-next.f4445dd.342"
 
@@ -295,15 +278,6 @@
   version "1.1.0-RC04"
   resolved "https://registry.yarnpkg.com/@eclipse-glsp/protocol/-/protocol-1.1.0-RC04.tgz#a96c628aff909ab443261dbe289080513c18dbcf"
   integrity sha512-Ds0aKL7CjAFMOiNY4MZd2HnXxlklvMhC+bxuH1ab0uj7ot6b9j3o8YrDZqLHqIYChNrEmoUEYRW71nFkWcrj3A==
-  dependencies:
-    sprotty-protocol "0.13.0-next.f4445dd.342"
-    uuid "7.0.3"
-    vscode-ws-jsonrpc "^2.0.1"
-
-"@eclipse-glsp/protocol@1.1.0-next.26bf120.222+26bf120":
-  version "1.1.0-next.26bf120.222"
-  resolved "https://registry.yarnpkg.com/@eclipse-glsp/protocol/-/protocol-1.1.0-next.26bf120.222.tgz#2766b67987a3de185a575d60d64a069af091c8fb"
-  integrity sha512-ZsmiV8W0FUVaRzfi9y3xA4TSbChA6Pb3QPRLFoLUl8ANI7Mbrar4Pw4alrNouk3SlYxoFvgJIrKaFzvCM5xu2A==
   dependencies:
     sprotty-protocol "0.13.0-next.f4445dd.342"
     uuid "7.0.3"
@@ -457,6 +431,28 @@
   dependencies:
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
+
+"@jsonforms/core@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@jsonforms/core/-/core-3.0.0.tgz#f743c139f2036f461cc52c109e1c3d884bea8e4e"
+  integrity sha512-DcUGLNaeAE411oA8d5dPuPEF2/nDmALAfQRsaA3GPAre2D76kJXyBb8TFMjLMRJCVIR0q5LsiRRdmLnuPVHKqA==
+  dependencies:
+    "@types/json-schema" "^7.0.3"
+    ajv "^8.6.1"
+    ajv-formats "^2.1.0"
+    lodash "^4.17.15"
+
+"@jsonforms/react@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@jsonforms/react/-/react-3.0.0.tgz#73f9f52ec0301d6252b78a1af1c91f51f3da24e6"
+  integrity sha512-Fj/L6hjk9uYSEBQrV7Vyj3ocTYGFelSupAJYmlys/37BPgifzPc+cBQj5bMKzx6pfO8YbmI+Sr3HDs2eNA/LkA==
+  dependencies:
+    lodash "^4.17.15"
+
+"@jsonforms/vanilla-renderers@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@jsonforms/vanilla-renderers/-/vanilla-renderers-3.0.0.tgz#9014463db5089afc47c0db55b7bbcf8755219c75"
+  integrity sha512-KrQzotq3bK7q/1fh2/dH3hYinjt9UaI0N52ep7xSerhtcPf9PSBd1yzWNfTmfTAND872Zl7rvYog9Izdcv4mUA==
 
 "@lerna/add@6.4.1":
   version "6.4.1"
@@ -1429,6 +1425,35 @@
   dependencies:
     "@octokit/openapi-types" "^16.0.0"
 
+"@open-bpmn/open-bpmn-glsp@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@open-bpmn/open-bpmn-glsp/-/open-bpmn-glsp-0.8.0.tgz#747944c2566247db77b8bd327c67316de477ec17"
+  integrity sha512-UN5yOT58uaMSTl8F2Un33BrIgumCT87XsFQK9q/GY/9e8bRsloqe0k3T7E+h0hvqdVGkfP0saBXS/R65PrOecQ==
+  dependencies:
+    "@eclipse-glsp/client" "1.1.0-RC04"
+    "@open-bpmn/open-bpmn-model" "0.8.0"
+    "@open-bpmn/open-bpmn-properties" "0.8.0"
+    balloon-css "^0.5.0"
+
+"@open-bpmn/open-bpmn-model@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@open-bpmn/open-bpmn-model/-/open-bpmn-model-0.8.0.tgz#38001c120970e45fe45374ce9cd7f21295eb08c0"
+  integrity sha512-xRe46MmkYL6QuoSaF7/dRttsqOlkjGNlaPm85RBFnLg/K45xLWT6ynsicPSwbjNzrLMXi6CAAVTLmv1BrcMoig==
+  dependencies:
+    "@eclipse-glsp/client" "1.1.0-RC04"
+
+"@open-bpmn/open-bpmn-properties@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@open-bpmn/open-bpmn-properties/-/open-bpmn-properties-0.8.0.tgz#5fd64df5516d08c00d2d6ac44bfa7b670d343bc7"
+  integrity sha512-aGxs20CbyJ1Q+ivoaytmzBQ77tMCsmnn45ZdMAvrhyHakAuvDIBTK+3kKRqCAE/9zhIgOU5LQv7PsDtHKfwhoQ==
+  dependencies:
+    "@eclipse-glsp/client" "1.1.0-RC04"
+    "@jsonforms/core" "3.0.0"
+    "@jsonforms/react" "3.0.0"
+    "@jsonforms/vanilla-renderers" "3.0.0"
+    "@open-bpmn/open-bpmn-model" "0.8.0"
+    balloon-css "^0.5.0"
+
 "@parcel/watcher@2.0.4":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@parcel/watcher/-/watcher-2.0.4.tgz#f300fef4cc38008ff4b8c29d92588eced3ce014b"
@@ -1528,7 +1553,7 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.51.tgz#cfd70924a25a3fd32b218e5e420e6897e1ac4f40"
   integrity sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==
 
-"@types/json-schema@*", "@types/json-schema@^7.0.8", "@types/json-schema@^7.0.9":
+"@types/json-schema@*", "@types/json-schema@^7.0.3", "@types/json-schema@^7.0.8", "@types/json-schema@^7.0.9":
   version "7.0.11"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.11.tgz#d421b6c527a3037f7c84433fd2c4229e016863d3"
   integrity sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==
@@ -1924,6 +1949,13 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
+ajv-formats@^2.1.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/ajv-formats/-/ajv-formats-2.1.1.tgz#6e669400659eb74973bbf2e33327180a0996b520"
+  integrity sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==
+  dependencies:
+    ajv "^8.0.0"
+
 ajv-keywords@^3.5.2:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-3.5.2.tgz#31f29da5ab6e00d1c2d329acf7b5929614d5014d"
@@ -1937,6 +1969,16 @@ ajv@^6.10.0, ajv@^6.12.4, ajv@^6.12.5:
     fast-deep-equal "^3.1.1"
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.4.1"
+    uri-js "^4.2.2"
+
+ajv@^8.0.0, ajv@^8.6.1:
+  version "8.12.0"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.12.0.tgz#d1a0527323e22f53562c567c00991577dfbe19d1"
+  integrity sha512-sRu1kpcO9yLtYxBKvqfTeh9KzZEwO3STyX1HT+4CaDzC6HpTGYhIhPIzj9XuKU7KYDwnaeh5hcOwjy1QuJzBPA==
+  dependencies:
+    fast-deep-equal "^3.1.1"
+    json-schema-traverse "^1.0.0"
+    require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
 ansi-colors@4.1.1:
@@ -4443,6 +4485,11 @@ json-schema-traverse@^0.4.1:
   resolved "https://registry.yarnpkg.com/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz#69f6a87d9513ab8bb8fe63bdb0979c448e684660"
   integrity sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg==
 
+json-schema-traverse@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz#ae7bcb3656ab77a73ba5c49bf654f38e6b6860e2"
+  integrity sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==
+
 json-stable-stringify-without-jsonify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
@@ -6041,6 +6088,11 @@ require-directory@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
   integrity sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==
+
+require-from-string@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/require-from-string/-/require-from-string-2.0.2.tgz#89a7fdd938261267318eafe14f9c32e598c36909"
+  integrity sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==
 
 require-main-filename@^2.0.0:
   version "2.0.0"
