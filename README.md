@@ -78,3 +78,22 @@ DiagramType  - see BPMNDiagramModule.getDiagramType()
 It is also Define in the bpmn-language.ts file 
 
 	diagramType: 'bpmn-diagram',
+
+	
+	
+	
+	
+# Problems
+
+Weiteres Vorgehen:
+
+ - Server extern im Debug Modus starten - so lässt sich wenigstens das verhalten dort analysieren
+ 
+ - Website lesen: https://github.com/eclipse-glsp/glsp-vscode-integration/tree/master/packages/vscode-integration#getting-started
+ 
+ - Diskussion nochmal lesen: https://github.com/eclipse-glsp/glsp/discussions/872
+ 
+ - Und dann weiter an dieser Code Stelle abarbeiten:
+ 
+      const bpmnServer = new SocketGlspVscodeServer({
+	

@@ -3,7 +3,7 @@
   "private": "true",
   "version": "0.8.0",
   "description": "VS-Code Integration for Open-BPMN",
-  "displayName": "Open-BPMN VSCode Integration",
+  "displayName": "Open-BPMN VSCode Extension",
   "publisher": "Imixs-Workflow",
   "homepage": "https://github.com/imixs/open-bpmn-vscode-integration/",
   "bugs": "https://github.com/imixs/open-bpmn-vscode-integration/issues",
