@@ -17,7 +17,11 @@
         "${workspaceFolder}/open-bpmn.vscode/extension/lib/*.js",
         "${workspaceFolder}/vscode-integration/lib/**/*.js"
       ],
-      "sourceMaps": true
+      "sourceMaps": true,
+      "env": {
+        "GLSP_SERVER_DEBUG": "false",
+        "GLSP_SERVER_PORT": "5007"
+      }
     },
     {
       "name": "Open-BPMN GLSP Extension (External GLSP Server)",

@@ -42,6 +42,9 @@ The server version is also located in the Maven Central Repository:
 	https://repo1.maven.org/maven2/org/imixs/bpmn/open-bpmn.server/0.8.0/
 
 
+
+**IMPORTANT**: Make sure that you are starting VSCode with Java 11 or higher!
+
 ## Client Configuration
 
 On the client side some settings are important.
