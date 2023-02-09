@@ -29,8 +29,11 @@
     "mvn-artifact-download": "5.1.0"
   },
   "resolutions": {
-    "**/sprotty": "0.13.0-next.f4445dd.342"
-  },  
+    "**/sprotty": "0.13.0-next.f4445dd.342",
+    "@open-bpmn/open-bpmn-model": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-model/",
+    "@open-bpmn/open-bpmn-glsp": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-glsp/",
+    "@open-bpmn/open-bpmn-properties": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-properties/"
+  },
   "workspaces": [
     "packages/*/",
     "open-bpmn.vscode/*"

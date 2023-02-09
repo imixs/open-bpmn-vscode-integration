@@ -79,8 +79,24 @@ It is also Define in the bpmn-language.ts file
 
 	diagramType: 'bpmn-diagram',
 
+
+# Development
+
+	$ cd open-bpmn.vscode/webview
+	$ yarn add file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-model/
 	
-	
+
+
+
+# Theming and CSS
+
+For theming the Open-BPMN elements we overwrite some of the Theia specific css files form Open-BPMN with additional css files located at `webview/src/css`.
+
+You can find the colors and CSS variables divined by VS-Code here:
+
+
+ - https://code.visualstudio.com/api/extension-guides/webview#theming-webview-content
+ - https://code.visualstudio.com/api/references/theme-color
 	
 	
 # Problems

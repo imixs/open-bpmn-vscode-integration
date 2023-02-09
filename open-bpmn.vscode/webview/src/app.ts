@@ -17,6 +17,10 @@
 import { createBPMNDiagramContainer } from '@open-bpmn/open-bpmn-glsp';
 import { GLSPStarter } from '@eclipse-glsp/vscode-integration-webview';
 import '@eclipse-glsp/vscode-integration-webview/css/glsp-vscode.css';
+// css styles
+import './css/bpmn-properties.css';
+import './css/jsonforms-theia.css';
+import './css/bpmn-vscode.css';
 import { Container } from 'inversify';
 import { SprottyDiagramIdentifier } from 'sprotty-vscode-webview';
 

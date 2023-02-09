@@ -1,0 +1,297 @@
+/********************************************************************************
+ * Copyright (c) 2022 Imixs Software Solutions GmbH,
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 3
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You can receive a copy of the GNU General Public
+ * License at http://www.gnu.org/licenses/gpl.html
+ *
+ * Project:
+ *     https://github.com/imixs/open-bpmn
+ *
+ * Contributors:
+ *     Imixs Software Solutions GmbH - Project Management
+ *     Ralph Soika - Software Developer
+ ********************************************************************************/
+:root {
+    --jsonforms-label-width: 250px;
+    --jsonforms-line-height: 28px;
+    --jsonforms-margin: 4px;
+    --jsonforms-padding: 8px;
+}
+
+.vertical-layout {
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--jsonforms-padding);
+}
+.horizontal-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: var(--jsonforms-padding);
+}
+
+
+.vertical-layout>* {
+    display: table-row;
+    width: 100%;
+}
+.horizontal-layout>* {
+  flex: 1;
+}
+
+
+.vertical-layout-item .control {
+    display: flex;
+    flex-direction: column;
+	margin: var(--jsonforms-margin);
+    padding-right: var(--jsonforms-padding)
+}
+.horizontal-layout-item .control {
+	display: flex;
+    flex-direction: column;
+    margin: var(--jsonforms-margin);
+    padding-right: var(--jsonforms-padding)
+}
+
+
+.vertical-layout-item>label {
+    flex: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+
+.horizontal-layout[hidden] {
+  display: none;
+}
+
+
+
+.array-table-layout table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+.control>label, .array-table-layout.control>header>label {
+    flex: none;
+    display: flex;
+    width: var(--jsonforms-label-width);
+    height: var(--jsonforms-line-height);
+    align-items: center;
+}
+
+.control>input, .control>select, .array-table-layout td input, .array-table-layout td select {
+    display: flex;
+    height: var(--jsonforms-line-height);
+    width: 100%;
+    padding: 0 5px;
+    background: var(--vscode-settings-textInputBackground) !important;
+    flex-basis: auto;
+    flex-shrink: 1 !important;
+    flex-grow: 0 !important;
+    color: var(--theia-input-foreground);
+    border: 1px solid var(--theia-dropdown-border); 
+}
+.control>textarea {
+    display: flex;
+    height: var(--jsonforms-line-height);
+    width: 100%;
+    padding: 0 5px;
+    background: var(--vscode-settings-textInputBackground) !important;
+    flex-basis: auto;
+    flex-shrink: 1 !important;
+    flex-grow: 0 !important;
+    color: var(--vscode-input-foreground);
+    border: 1px solid var(--vscode-dropdown-border);
+    resize: vertical;
+    min-height: 7em;
+}
+
+.control>input[type="date"]::-webkit-calendar-picker-indicator {
+    /* filter to invert calendar icon of date input field is visible in both themes */
+    filter: invert(0.5);
+}
+
+.control>select {
+    padding: 0 !important;
+    border: none;
+}
+
+.control>input[type="checkbox"] {
+    display: flex !important;
+    flex: none !important;
+    outline: none !important;
+    margin: 0;
+}
+
+.control>input[disabled], .array-table-layout td input[disabled], .array-table-layout td select[disabled] {
+    opacity: 0.5;
+}
+
+.control>.validation {
+    font-size: var(--theia-ui-font-size0);
+    text-align: left;
+    font-family: var(--theia-ui-font-family);
+    padding-left: 3px;
+    order: 2;
+}
+
+.control>.validation_error, .control>.validate.invalid {
+    color: var(--theia-editorError-foreground);
+}
+
+.array-table-layout.control>header {
+    margin-top: 10px;
+    display: flex;
+    width: var(--jsonforms-label-width);
+    flex: none;
+    flex-direction: column;
+}
+
+.array-table-layout.control>header>button {
+    margin: 10px 10px 0 0;
+    align-self: flex-start;
+}
+
+.array-table-layout.control>table>thead {
+}
+
+.array-table-layout.control>table>tbody>tr>td>input {
+    width: 100%;
+}
+
+.array-table-layout.control>table>tbody>tr>td>span {
+    /* .validation error */
+    font-size: var(--theia-ui-font-size0);
+    text-align: left;
+    font-family: var(--theia-ui-font-family);
+    padding-left: 3px;
+    order: 2;
+    color: var(--theia-editorError-foreground);
+    margin-left: 12px;
+}
+
+.array-table-layout.control>table>tbody>tr>td>button {
+    /* theia-button */
+    border: none;
+    color: var(--theia-button-foreground);
+    background-color: var(--theia-button-background);
+    min-width: 65px;
+    outline: none;
+    cursor: pointer;
+    padding: 4px 9px;
+    margin-left: calc(var(--theia-ui-padding)*2);
+    border-radius: 1px;
+    box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 20%), 0px 1px 2px 0px rgb(0 0 0 / 14%), 0px 1px 1px -2px rgb(0 0 0 / 12%);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.array-table-layout.control>table>tbody>tr>td:nth-child(2) {
+    width: 12%;
+    white-space: break-spaces;
+}
+
+.array-table-layout.control>table>tbody>tr>td:last-child {
+    width: 1%;
+}
+
+.array-table-layout.control>table>tbody>tr>td>button:focus {
+    background-color: var(--vscode-button-hoverBackground);
+}
+
+
+/* Layouts */
+
+
+.group-layout {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-color: var(--jsf-border-color);
+  border-width: thin;
+  border-radius: 0.2em;
+}
+
+.group-layout[hidden] {
+  display: none;
+}
+
+.group-layout>legend {
+  padding: 0 0.5em;
+  font-weight: bold;
+  color: var(--jsf-main-fg-color);
+}
+
+.categorization {
+  display: flex;
+  flex-direction: row;
+}
+
+.categorization[hidden] {
+  display: none;
+}
+
+.categorization>* {
+}
+
+.categorization>*:first-child {
+  margin-right: 0.25em;
+}
+
+.categorization>.categorization-master {
+  flex: 1;
+  background: var(--vscode-menu-background);
+}
+
+.categorization>.categorization-master ul {
+  list-style-type: none;
+  font-weight: normal;
+  padding: 0;
+}
+
+.categorization>.categorization-master ul>li>span {
+  cursor: pointer;
+  display: block;
+  color: var(--jsf-main-fg-color);
+  padding: var(--jsonforms-padding);
+}
+
+.categorization>.categorization-master ul>li>span:hover {
+  background: var(--vscode-list-hoverBackground);
+}
+
+.categorization>.categorization-master ul>li.category-group>ul {
+  padding-left: 0.5em;
+}
+
+.categorization>.categorization-master ul>li.category-group>span {
+  cursor: default;
+}
+
+.categorization>.categorization-master ul>li.category-group>span:hover {
+  font-weight: normal;
+}
+
+.categorization>.categorization-master ul>li.selected>span {
+  font-weight: bold;
+  border-top: 1px solid var(--theia-focusBorder);
+  border-bottom: 1px solid var(--theia-focusBorder);
+  background: var(--vscode-activityBar-background);
+}
+
+.categorization>.categorization-detail {
+  flex: 6;
+}
