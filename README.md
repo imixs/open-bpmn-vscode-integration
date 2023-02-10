@@ -93,7 +93,7 @@ It is also Define in the bpmn-language.ts file
 
 # Theming and CSS
 
-For theming the Open-BPMN elements we overwrite some of the Theia specific css files form Open-BPMN with additional css files located at `webview/src/css`.
+The  theming the Open-BPMN elements is based on the theia platform style guide. For VS-Code we overwrite some of the Theia specific css files form Open-BPMN with additional css files located at `webview/src/css`.
 
 You can find the colors and CSS variables divined by VS-Code here:
 

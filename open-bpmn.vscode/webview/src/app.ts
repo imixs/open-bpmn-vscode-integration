@@ -14,15 +14,13 @@
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
 // import { createWorkflowDiagramContainer } from '@eclipse-glsp-examples/workflow-glsp';
-import { createBPMNDiagramContainer } from '@open-bpmn/open-bpmn-glsp';
 import { GLSPStarter } from '@eclipse-glsp/vscode-integration-webview';
 import '@eclipse-glsp/vscode-integration-webview/css/glsp-vscode.css';
-// css styles
-import './css/bpmn-properties.css';
-import './css/jsonforms-theia.css';
-import './css/bpmn-vscode.css';
+import { createBPMNDiagramContainer } from '@open-bpmn/open-bpmn-glsp';
 import { Container } from 'inversify';
 import { SprottyDiagramIdentifier } from 'sprotty-vscode-webview';
+// css styles
+import './css/bpmn-vscode.css';
 
 class BPMNGLSPStarter extends GLSPStarter {
     createContainer(diagramIdentifier: SprottyDiagramIdentifier): Container {
