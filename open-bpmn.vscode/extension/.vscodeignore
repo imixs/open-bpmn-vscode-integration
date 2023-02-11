@@ -1,0 +1,3 @@
+# Ignore source folder and log files
+src/
+**/*.log
