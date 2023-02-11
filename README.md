@@ -69,13 +69,19 @@ It is also Define in the bpmn-language.ts file
 # Development
 
 To build the webview and extension module run
-$ yarn install
+
+    $ yarn install
 
 ## Package VS-Code Extension
 
-To package the VS-Code Extension into a .vsix file you first have to install the vsce tool. Next run:
+To package the VS-Code Extension into a .vsix file you first have to install the vsce tool. If not yet done install the node package `rimraf`
+
+    $ sudo npm i -g rimraf
+
+Next run:
 
     $ cd open-bpmn.vscode/extension
+    $ yarn install
     $ vsce package --yarn
 
 You can check the file with :
