@@ -13,10 +13,11 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-import 'reflect-metadata';
-import * as vscode from 'vscode';
-import { activate as extensionActivate } from './open-bpmn-extension';
+import "reflect-metadata";
+import * as vscode from "vscode";
+import { activate as extensionActivate } from "./open-bpmn-extension";
 
 export function activate(context: vscode.ExtensionContext): Promise<void> {
-    return extensionActivate(context);
+  console.log("Launching Open-BPMN GLSP Server...");
+  return extensionActivate(context);
 }

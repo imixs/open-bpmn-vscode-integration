@@ -26,21 +26,12 @@ buildNumber.properties
 
 
 .temp
-
 *.log
 
-## Web ##
 
-node_modules
-node_modules/.yarn-integrity
-.browser_modules
-
+## Nodejs ##
 lib
-
-*.log
-
-**/*-app/**
-!**/*-app/package.json
-
-
-
+node_modules
+pack
+*.tsbuildinfo
+package-lock.json
