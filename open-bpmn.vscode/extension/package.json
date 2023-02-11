@@ -178,12 +178,10 @@
   "files": [
     "lib",
     "extension",
-    "server",
-    "**/webview"
+    "server"
   ],
   "dependencies": {
     "@vscode/codicons": "^0.0.25",
-    "open-bpmn-vscode-webview": "0.8.0",
     "reflect-metadata": "^0.1.13",
     "sprotty-vscode-protocol": "0.3.0",
     "@eclipse-glsp/vscode-integration": "1.1.0-RC04"
