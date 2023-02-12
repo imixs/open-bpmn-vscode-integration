@@ -6,9 +6,9 @@ This project provides the [Open-BPMN Modeling Tool](https://github.com/imixs/ope
 
 BPMN 2.0 is an open standard to describe business processes that can be visualized in diagram editors and executed by process engines compliant with the BPMN 2.0 standard. This makes BPMN an interoperable, interchangeable and open standard in the field of business process management. BPMN was intended for users at all levels, from the business analysts who create the initial design, to the developers who implement the technical details, and finally, to the business users responsible for managing and monitoring the processes.
 
-<center><img  width="800" src="./doc/images/imixs-bpmn-001.png" /></center>
+<center><img  width="800" src="https://github.com/imixs/open-bpmn/raw/master/doc/images/imixs-bpmn-001.png" /></center>
 
-You will find general Information about the **Open-BPMN Modeling Tool** [here]](https://github.com/imixs/open-bpmn).
+You will find general Information about the **Open-BPMN Modeling Tool** [here](https://github.com/imixs/open-bpmn).
 
 # Installation
 
