@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Open-BPMN GLSP Extension",
+      "name": "Launch Open-BPMN VS-Code Extension",
       "type": "extensionHost",
       "request": "launch",
       "runtimeExecutable": "${execPath}",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "name": "Open-BPMN GLSP Extension (External GLSP Server)",
+      "name": "Launch Open-BPMN VS-Code Extension (without Server)",
       "type": "extensionHost",
       "request": "launch",
       "runtimeExecutable": "${execPath}",
