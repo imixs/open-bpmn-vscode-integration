@@ -68,7 +68,7 @@ It is also Define in the bpmn-language.ts file
 
 # Development
 
-To build the webview and extension module run
+To build the webview and extension module, first rebuild the webview. Run from the project root:
 
     $ yarn install
 

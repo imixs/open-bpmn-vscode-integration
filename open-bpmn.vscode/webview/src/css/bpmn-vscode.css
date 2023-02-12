@@ -62,8 +62,8 @@
 }
 
 .bpmn-property-header {
-  background: var(--vscode-editorHoverWidget-statusBarBackground);
-  color: var(--vscode-foreground);
+  background: var(--vscode-statusBar-background);
+  color: var(--vscode-statusBar-foreground);
   border-top: 1px solid var(--vscode-focusBorder);
 }
 
