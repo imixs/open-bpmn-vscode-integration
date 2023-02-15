@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Open-BPMN VS-Code Extension",
+      "name": "Open-BPMN VS-Code Extension",
       "type": "extensionHost",
       "request": "launch",
       "runtimeExecutable": "${execPath}",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "name": "Launch Open-BPMN VS-Code Extension (without Server)",
+      "name": "Open-BPMN VS-Code Extension (without Server)",
       "type": "extensionHost",
       "request": "launch",
       "runtimeExecutable": "${execPath}",
