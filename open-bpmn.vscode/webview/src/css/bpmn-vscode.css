@@ -50,6 +50,20 @@
   fill: var(--vscode-titleBar-activeForeground);
 }
 
+.dataObject > .sprotty-node {
+  stroke: var(--vscode-focusBorder);
+  outline-color: var(--vscode-editor-foreground);
+}
+
+.message > .sprotty-node {
+  stroke: var(--vscode-focusBorder);
+  outline-color: var(--vscode-editor-foreground);
+}
+.message > polyline {
+  stroke: var(--vscode-editor-foreground);
+  stroke-width: 2;
+}
+
 /* Property Panel */
 .categorization > .categorization-master {
   background: var(--vscode-sideBar-background) !important;
