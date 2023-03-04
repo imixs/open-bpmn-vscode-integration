@@ -54,9 +54,7 @@ To build the extension and create the VSIX file run:
     $ yarn install
     $ vsce package --yarn
 
-**Note:** The file `src/server-config.json` contains the server part configuration. Make sure that the corresponding .jar file is part of the `/server` folder
-
-You can check the file with :
+You can check the result file with :
 
     $ vsce ls
 
@@ -66,6 +64,28 @@ Find more details about the publishing and packaging process here:
 
 - https://code.visualstudio.com/api/working-with-extensions/publishing-extension
 - https://code.visualstudio.com/api/working-with-extensions/publishing-extension#packaging-extensions
+
+### The Server Configuration
+
+The file `src/server-config.json` contains the server part configuration. Make sure that the corresponding .jar file is part of the `/server` folder
+
+See the following example:
+
+```json
+{
+  "releaseRepository": "https://repo1.maven.org/maven2/",
+  "snapshotRepository": "https://oss.sonatype.org/content/repositories/snapshots/",
+  "groupId": "org.imixs.bpmn",
+  "artifactId": "open-bpmn.server",
+  "version": "0.9.1",
+  "isSnapShot": true,
+  "classifier": "glsp"
+}
+```
+
+This configuration expect the server jar file `open-bpmn.server-0.9.1-SNAPSHOT-glsp.jar`
+
+If you want to start you own BPMN Extension Server you can easily switch the configuration.
 
 ### Logging
 
