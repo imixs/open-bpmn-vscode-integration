@@ -33,7 +33,7 @@
 
 /* BPMN Elements */
 .pool > .sprotty-node {
-  fill: var(--vscode-activityBar-background);
+  fill: var(--vscode-sideBar-background);
   stroke: var(--vscode-focusBorder);
   outline-color: var(--vscode-focusBorder);
 }
