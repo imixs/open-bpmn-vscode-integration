@@ -103,6 +103,10 @@
   background-color: var(--vscode-button-hoverBackground);
 }
 
+.BPMNLabel > .sprotty-node.mouseover {
+  fill: var(--vscode-sideBar-background);
+}
+
 /* **************
  * JSON Forms   *
  ****************/
