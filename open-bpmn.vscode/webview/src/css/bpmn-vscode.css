@@ -65,20 +65,27 @@
 }
 
 /* Property Panel */
-.categorization > .categorization-master {
-  background: var(--vscode-sideBar-background) !important;
-}
-
 .bpmn-property-panel {
   background: var(--vscode-editor-background);
   opacity: 0.98 !important;
-  color: var(--vscode-foreground);
+  color: var(--vscode-editor-foreground);
 }
 
 .bpmn-property-header {
-  background: var(--vscode-statusBar-background);
-  color: var(--vscode-statusBar-foreground);
+  background: var(--vscode-titleBar-activeBackground);
+  color: var(--vscode-titleBar-activeForeground);
   border-top: 1px solid var(--vscode-focusBorder);
+}
+/*
+.categorization > .categorization-master {
+  background: var(--vscode-sideBar-background) !important;
+}
+*/
+.bpmn-properties-body .categorization-master {
+  background: var(--vscode-titleBar-activeBackground);
+}
+.categorization > .categorization-master ul li.selected > span {
+  color: var(--vscode-activityBar-foreground);
 }
 
 .bpmn-property-header .header-tools i:hover:not(.clicked) {
@@ -88,13 +95,13 @@
 /* Button layout in property details block */
 .bpmn-properties-body .categorization-detail button {
   color: var(--vscode-button-foreground);
-  background-color: var(--theia-button-background);
+  background-color: var(--vscode-button-background);
 }
 .bpmn-properties-body .categorization-detail button:focus {
-  outline: 1px solid var(--theia-focusBorder);
+  outline: 1px solid var(--vscode-focusBorder);
 }
 .bpmn-properties-body .categorization-detail button:hover {
-  background-color: var(--theia-button-hoverBackground);
+  background-color: var(--vscode-button-hoverBackground);
 }
 
 /* **************
