@@ -54,6 +54,8 @@ To build the extension and create the VSIX file run:
     $ yarn install
     $ vsce package --yarn
 
+**Note:** The file `src/server-config.json` contains the server part configuration. Make sure that the corresponding .jar file is part of the `/server` folder
+
 You can check the file with :
 
     $ vsce ls
