@@ -13,9 +13,11 @@
 *
 * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
 ********************************************************************************/
+.tool-palette .palette-body .group-header {
+  background: var(--vscode-menu-separatorBackground);
+}
 
 /* Customizing the sprotty diagram view */
-
 .sprotty-graph {
   font-size: 15pt;
   background-size: 10px 10px !important;
