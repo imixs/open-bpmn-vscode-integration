@@ -219,8 +219,6 @@
   },
   "workspaces": {
     "packages": [
-      "**/@vscode/codicons",
-      "**/@vscode/codicons/**",
       "**/open-bpmn-vscode-webview"
     ]
   }

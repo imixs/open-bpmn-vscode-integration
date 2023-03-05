@@ -11,5 +11,6 @@ echo "==> build VSIX extension..."
 cd open-bpmn.vscode/extension
 yarn install
 vsce package --yarn
+cd ../..
 
 echo "Build completed!"
