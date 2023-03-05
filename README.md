@@ -163,3 +163,26 @@ DiagramType - see BPMNDiagramModule.getDiagramType()
 It is also Define in the bpmn-language.ts file
 
     diagramType: 'bpmn-diagram',
+
+# Publish Open-BPMN
+
+To publish open-bpmn .vsix extension you first need a personal access token for 'open-bpmn'.
+
+From the Imixs organization's home page: https://dev.azure.com/imixs create a access token for 'open-bpmn' with the scope "Marketplace - Manage"
+
+login via the vsce tool. You will be asked for your personal access token:
+
+    $ vsce login open-bpmn
+    https://marketplace.visualstudio.com/manage/publishers/
+    Personal Access Token for publisher 'open-bpmn': ****************************************************
+
+    The Personal Access Token verification succeeded for the publisher 'open-bpmn'.
+
+You can now publish the Open-BPMN extension using vsce with the publish command:
+
+    $ cd open-bpmn.vscode/extension/
+    $ vsce publish
+
+The publishing process can take some minutes. To verify the status open:
+
+    https://marketplace.visualstudio.com/manage/publishers/open-bpmn/

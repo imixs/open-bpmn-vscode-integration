@@ -4,7 +4,7 @@
   "version": "0.9.1",
   "description": "Free BPMN 2.0 modeling tool to create and edit .bpmn files",
   "displayName": "Open-BPMN VSCode Extension",
-  "publisher": "Imixs-Workflow",
+  "publisher": "open-bpmn",
   "homepage": "https://github.com/imixs/open-bpmn/",
   "bugs": "https://github.com/imixs/open-bpmn-vscode-integration/issues",
   "author": {
