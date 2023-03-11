@@ -1426,26 +1426,26 @@
     "@octokit/openapi-types" "^16.0.0"
 
 "@open-bpmn/open-bpmn-glsp@0.9.1", "@open-bpmn/open-bpmn-glsp@file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-glsp/":
-  version "0.9.1"
+  version "0.9.2"
   dependencies:
     "@eclipse-glsp/client" "1.1.0-RC04"
-    "@open-bpmn/open-bpmn-model" "0.9.1"
-    "@open-bpmn/open-bpmn-properties" "0.9.1"
+    "@open-bpmn/open-bpmn-model" "0.9.2"
+    "@open-bpmn/open-bpmn-properties" "0.9.2"
     balloon-css "^0.5.0"
 
-"@open-bpmn/open-bpmn-model@0.9.1", "@open-bpmn/open-bpmn-model@file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-model/":
-  version "0.9.1"
+"@open-bpmn/open-bpmn-model@0.9.2", "@open-bpmn/open-bpmn-model@file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-model/":
+  version "0.9.2"
   dependencies:
     "@eclipse-glsp/client" "1.1.0-RC04"
 
-"@open-bpmn/open-bpmn-properties@0.9.1", "@open-bpmn/open-bpmn-properties@file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-properties/":
-  version "0.9.1"
+"@open-bpmn/open-bpmn-properties@0.9.2", "@open-bpmn/open-bpmn-properties@file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-properties/":
+  version "0.9.2"
   dependencies:
     "@eclipse-glsp/client" "1.1.0-RC04"
     "@jsonforms/core" "3.0.0"
     "@jsonforms/react" "3.0.0"
     "@jsonforms/vanilla-renderers" "3.0.0"
-    "@open-bpmn/open-bpmn-model" "0.9.1"
+    "@open-bpmn/open-bpmn-model" "0.9.2"
     balloon-css "^0.5.0"
 
 "@parcel/watcher@2.0.4":
