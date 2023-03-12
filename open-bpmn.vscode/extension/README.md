@@ -1,13 +1,12 @@
-**Open BPMN** is a free BPMN 2.0 modeling tool to create and edit .bpmn files based on the _Business Process Model and Notation (BPMN 2.0)_, proposed by the Object Management Group (OMG).
-
-BPMN 2.0 is an open standard to describe business processes that can be visualized in diagram editors and executed by process engines compliant with the BPMN 2.0 standard. This makes BPMN an interoperable, interchangeable and open standard in the field of business process management. BPMN was intended for users at all levels, from the business analysts who create the initial design, to the developers who implement the technical details, and finally, to the business users responsible for managing and monitoring the processes.
+**Open BPMN** is a free and open modeling platform to create and maintain business models based on the BPMN 2.0 standard. **Open BPMN** can be used by business analysts to design a top level business process, as also by architects and developers to model the technical details of complex processing logic.
+Further more, **Open BPMN** provides an extension mechanism to adapt the modeling platform to the individual requirements in any business process project.
 
 <img width="650" src="https://github.com/imixs/open-bpmn/raw/master/doc/images/imixs-bpmn-001.png" />
 
 # Extensibility
 
-Open BPMN is a free BPMN 2.0 modeling platform that can be extended and customized by any BPMN 2.0 compliant execution engine. Open BPMN is based on the Eclipse Graphical Language Server Platform (GLSP) providing an open-source framework for building diagram editors based on modern web technologies.
+BPMN 2.0 introduces an extensibility mechanism that allows extending standard BPMN elements with additional properties and behavior. It can be used by modeling tools to add non-standard elements or Artifacts to satisfy a specific need, such as the unique requirements of a vertical domain, and still have a valid BPMN Core.
 
-The primary goal of this project is to provide a graphical BPMN editing framework that can be extended in various ways by different solutions to create an agile and innovative community around the BPMN standard.
+Open Source Workflow Engines like [Imixs-Workflow](https://www.imixs.org) integrate Open BPMN into there tooling platforms and extend the core features of BPMN 2.0 with platform specific functionality.
 
 Learn more about the project [here](https://github.com/imixs/open-bpmn).
