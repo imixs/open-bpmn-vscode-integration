@@ -1,12 +1,12 @@
 {
   "name": "open-bpmn-vscode-extension",
   "private": "true",
-  "version": "0.9.2",
+  "version": "1.0.0",
   "description": "Free BPMN 2.0 modeling tool to create and edit .bpmn files",
-  "displayName": "Open-BPMN VSCode Extension",
+  "displayName": "Open-BPMN",
   "publisher": "open-bpmn",
   "homepage": "https://github.com/imixs/open-bpmn/",
-  "bugs": "https://github.com/imixs/open-bpmn-vscode-integration/issues",
+  "bugs": "https://github.com/imixs/open-bpmn/issues",
   "author": {
     "name": "Imixs-Workflow"
   },
@@ -18,17 +18,20 @@
     {
       "name": "Imixs-Workflow Project",
       "email": "info@imixs.com",
-      "url": "https://github.com/imixs/open-bpmn/"
+      "url": "https://www.imixs.org/"
     }
   ],
   "keywords": [
     "BPMN",
-    "Modelling",
-    "Workflow Engine"
+    "modelling",
+    "Workflow Engine",
+    "diagram",
+    "Business process analysis"
   ],
   "categories": [
     "Programming Languages",
-    "Visualization"
+    "Visualization",
+    "Education"
   ],
   "icon": "logo-openbpmn.png",
   "engines": {
