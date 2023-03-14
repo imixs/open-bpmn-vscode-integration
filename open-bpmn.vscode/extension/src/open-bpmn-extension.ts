@@ -98,17 +98,17 @@ export async function activate(
   });
 
   context.subscriptions.push(
-    vscode.commands.registerCommand("workflow.goToNextNode", () => {
+    vscode.commands.registerCommand("bpmn.goToNextNode", () => {
       glspVscodeConnector.sendActionToActiveClient(
         NavigateAction.create("next")
       );
     }),
-    vscode.commands.registerCommand("workflow.goToPreviousNode", () => {
+    vscode.commands.registerCommand("bpmn.goToPreviousNode", () => {
       glspVscodeConnector.sendActionToActiveClient(
         NavigateAction.create("previous")
       );
     }),
-    vscode.commands.registerCommand("workflow.showDocumentation", () => {
+    vscode.commands.registerCommand("bpmn.showDocumentation", () => {
       glspVscodeConnector.sendActionToActiveClient(
         NavigateAction.create("documentation")
       );
