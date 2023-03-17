@@ -66,24 +66,6 @@
         "enablement": "activeCustomEditorId == 'bpmn-diagram'"
       },
       {
-        "command": "bpmn.layout",
-        "title": "Layout diagram",
-        "category": "BPMN Diagram",
-        "enablement": "activeCustomEditorId == 'bpmn-diagram'"
-      },
-      {
-        "command": "bpmn.goToNextNode",
-        "title": "Go to next Node",
-        "category": "BPMN Navigation",
-        "enablement": "activeCustomEditorId == 'bpmn-diagram' && bpmn.editorSelectedElementsAmount == 1"
-      },
-      {
-        "command": "bpmn.goToPreviousNode",
-        "title": "Go to previous Node",
-        "category": "BPMN Navigation",
-        "enablement": "activeCustomEditorId == 'bpmn-diagram' && bpmn.editorSelectedElementsAmount == 1"
-      },
-      {
         "command": "bpmn.showDocumentation",
         "title": "Show documentation...",
         "category": "BPMN Diagram",
@@ -109,16 +91,6 @@
           "group": "bookmarks"
         },
         {
-          "command": "bpmn.goToNextNode",
-          "group": "navigation",
-          "when": "activeCustomEditorId == 'bpmn-diagram' && bpmn.editorSelectedElementsAmount == 1"
-        },
-        {
-          "command": "bpmn.goToPreviousNode",
-          "group": "navigation",
-          "when": "activeCustomEditorId == 'bpmn-diagram' && bpmn.editorSelectedElementsAmount == 1"
-        },
-        {
           "command": "bpmn.showDocumentation",
           "group": "navigation",
           "when": "activeCustomEditorId == 'bpmn-diagram' && bpmn.editorSelectedElementsAmount == 1"
@@ -134,12 +106,7 @@
           "command": "bpmn.center",
           "group": "navigation",
           "when": "activeCustomEditorId == 'bpmn-diagram'"
-        },
-        {
-          "command": "bpmn.layout",
-          "group": "navigation",
-          "when": "activeCustomEditorId == 'bpmn-diagram'"
-        },
+        }
         {
           "command": "bpmn.exportAsSVG",
           "when": "activeCustomEditorId == 'bpmn-diagram'"
@@ -160,27 +127,15 @@
         "when": "activeCustomEditorId == 'bpmn-diagram'"
       },
       {
-        "key": "ctrl+a",
-        "mac": "ctrl+a",
+        "key": "alt+a",
+        "mac": "alt+a",
         "command": "bpmn.selectAll",
         "when": "activeCustomEditorId == 'bpmn-diagram'"
       },
       {
-        "key": "alt+l",
-        "mac": "alt+l",
-        "command": "bpmn.layout",
-        "when": "activeCustomEditorId == 'bpmn-diagram'"
-      },
-      {
-        "key": "Ctrl+4",
-        "mac": "cmd+4",
-        "command": "bpmn.goToNextNode",
-        "when": "activeCustomEditorId == 'bpmn-diagram' && bpmn.editorSelectedElementsAmount == 1"
-      },
-      {
-        "key": "Ctrl+3",
-        "mac": "cmd+3",
-        "command": "bpmn.goToPreviousNode",
+        "key": "alt+p",
+        "mac": "alt+p",
+        "command": "bpmn.showDocumentation",
         "when": "activeCustomEditorId == 'bpmn-diagram' && bpmn.editorSelectedElementsAmount == 1"
       }
     ]
