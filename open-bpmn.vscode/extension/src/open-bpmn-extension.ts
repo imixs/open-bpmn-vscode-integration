@@ -13,10 +13,7 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-import {
-  GlspVscodeConnector,
-  NavigateAction,
-} from "@eclipse-glsp/vscode-integration";
+import { GlspVscodeConnector } from "@eclipse-glsp/vscode-integration";
 import {
   configureDefaultCommands,
   GlspServerLauncher,
@@ -26,6 +23,7 @@ import * as path from "path";
 import * as process from "process";
 import "reflect-metadata";
 import * as vscode from "vscode";
+import { BPMNPropertyPanelToggleAction } from "./open-bpmn-actions";
 import BPMNEditorProvider from "./open-bpmn-editor-provider";
 import * as config from "./server-config.json";
 
@@ -61,8 +59,6 @@ export async function activate(
 
   // Wrap server with quickstart component
   const bpmnServer = new SocketGlspVscodeServer({
-    // clientId: 'glsp.workflow',
-    // clientName: 'workflow',
     clientId: "glsp.bpmn",
     clientName: "bpmn",
     serverPort: JSON.parse(process.env.GLSP_SERVER_PORT || DEFAULT_SERVER_PORT),
@@ -75,7 +71,6 @@ export async function activate(
   });
 
   const customEditorProvider = vscode.window.registerCustomEditorProvider(
-    // 'workflow.glspDiagram',
     "bpmn-diagram",
     new BPMNEditorProvider(context, glspVscodeConnector),
     {
@@ -97,20 +92,11 @@ export async function activate(
     diagramPrefix: "bpmn",
   });
 
+  /* add properties command */
   context.subscriptions.push(
-    vscode.commands.registerCommand("bpmn.goToNextNode", () => {
+    vscode.commands.registerCommand("bpmn.showProperties", () => {
       glspVscodeConnector.sendActionToActiveClient(
-        NavigateAction.create("next")
-      );
-    }),
-    vscode.commands.registerCommand("bpmn.goToPreviousNode", () => {
-      glspVscodeConnector.sendActionToActiveClient(
-        NavigateAction.create("previous")
-      );
-    }),
-    vscode.commands.registerCommand("bpmn.showDocumentation", () => {
-      glspVscodeConnector.sendActionToActiveClient(
-        NavigateAction.create("documentation")
+        BPMNPropertyPanelToggleAction.create()
       );
     })
   );

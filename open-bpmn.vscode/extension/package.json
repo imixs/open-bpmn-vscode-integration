@@ -66,8 +66,8 @@
         "enablement": "activeCustomEditorId == 'bpmn-diagram'"
       },
       {
-        "command": "bpmn.showDocumentation",
-        "title": "Show documentation...",
+        "command": "bpmn.showProperties",
+        "title": "Show Properties...",
         "category": "BPMN Diagram",
         "enablement": "activeCustomEditorId == 'bpmn-diagram' && bpmn.editorSelectedElementsAmount == 1"
       },
@@ -91,7 +91,7 @@
           "group": "bookmarks"
         },
         {
-          "command": "bpmn.showDocumentation",
+          "command": "bpmn.showProperties",
           "group": "navigation",
           "when": "activeCustomEditorId == 'bpmn-diagram' && bpmn.editorSelectedElementsAmount == 1"
         }
@@ -106,7 +106,7 @@
           "command": "bpmn.center",
           "group": "navigation",
           "when": "activeCustomEditorId == 'bpmn-diagram'"
-        }
+        },
         {
           "command": "bpmn.exportAsSVG",
           "when": "activeCustomEditorId == 'bpmn-diagram'"
@@ -135,7 +135,7 @@
       {
         "key": "alt+p",
         "mac": "alt+p",
-        "command": "bpmn.showDocumentation",
+        "command": "bpmn.showProperties",
         "when": "activeCustomEditorId == 'bpmn-diagram' && bpmn.editorSelectedElementsAmount == 1"
       }
     ]
