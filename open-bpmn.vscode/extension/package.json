@@ -67,7 +67,7 @@
       },
       {
         "command": "bpmn.showProperties",
-        "title": "Show Properties...",
+        "title": "BPMN Properties",
         "category": "BPMN Diagram",
         "enablement": "activeCustomEditorId == 'bpmn-diagram' && bpmn.editorSelectedElementsAmount == 1"
       },
