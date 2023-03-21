@@ -27,7 +27,7 @@ export interface BPMNPropertyPanelToggleAction extends Action {
 }
 
 export namespace BPMNPropertyPanelToggleAction {
-  export const KIND = "properties";
+  export const KIND = "propertyPanelToggle";
 
   export function is(object: any): object is BPMNPropertyPanelToggleAction {
     return Action.hasKind(object, KIND);
