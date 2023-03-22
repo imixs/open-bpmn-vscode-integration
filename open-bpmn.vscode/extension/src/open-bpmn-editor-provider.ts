@@ -13,39 +13,47 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.01
  ********************************************************************************/
-import { GlspVscodeConnector } from '@eclipse-glsp/vscode-integration';
-import { GlspEditorProvider } from '@eclipse-glsp/vscode-integration/lib/quickstart-components';
-import * as vscode from 'vscode';
+import { GlspVscodeConnector } from "@eclipse-glsp/vscode-integration";
+import { GlspEditorProvider } from "@eclipse-glsp/vscode-integration/lib/quickstart-components";
+import * as vscode from "vscode";
 
 export default class BPMNlowEditorProvider extends GlspEditorProvider {
-    // diagramType = 'workflow-diagram';
-    diagramType = 'bpmn-diagram';
+  // diagramType = 'workflow-diagram';
+  diagramType = "bpmn-diagram";
 
-    constructor(
-        protected readonly extensionContext: vscode.ExtensionContext,
-        protected override readonly glspVscodeConnector: GlspVscodeConnector
-    ) {
-        super(glspVscodeConnector);
-    }
+  constructor(
+    protected readonly extensionContext: vscode.ExtensionContext,
+    protected override readonly glspVscodeConnector: GlspVscodeConnector
+  ) {
+    super(glspVscodeConnector);
+  }
 
-    setUpWebview(
-        _document: vscode.CustomDocument,
-        webviewPanel: vscode.WebviewPanel,
-        _token: vscode.CancellationToken,
-        clientId: string
-    ): void {
-        const webview = webviewPanel.webview;
-        const extensionUri = this.extensionContext.extensionUri;
-        const webviewScriptSourceUri = webview.asWebviewUri(vscode.Uri.joinPath(extensionUri, 'pack', 'webview.js'));
-        const codiconsUri = webview.asWebviewUri(
-            vscode.Uri.joinPath(extensionUri, 'node_modules', '@vscode/codicons', 'dist', 'codicon.css')
-        );
+  setUpWebview(
+    _document: vscode.CustomDocument,
+    webviewPanel: vscode.WebviewPanel,
+    _token: vscode.CancellationToken,
+    clientId: string
+  ): void {
+    const webview = webviewPanel.webview;
+    const extensionUri = this.extensionContext.extensionUri;
+    const webviewScriptSourceUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(extensionUri, "pack", "webview.js")
+    );
+    const codiconsUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(
+        extensionUri,
+        "node_modules",
+        "@vscode/codicons",
+        "dist",
+        "codicon.css"
+      )
+    );
 
-        webviewPanel.webview.options = {
-            enableScripts: true
-        };
+    webviewPanel.webview.options = {
+      enableScripts: true,
+    };
 
-        webviewPanel.webview.html = `
+    webviewPanel.webview.html = `
             <!DOCTYPE html>
             <html lang="en">
                 <head>
@@ -55,6 +63,11 @@ export default class BPMNlowEditorProvider extends GlspEditorProvider {
                 default-src http://*.fontawesome.com  ${webview.cspSource} 'unsafe-inline' 'unsafe-eval';
                 ">
 				<link href="${codiconsUri}" rel="stylesheet" />
+                <!-- disable modal confirm dialog 
+                  See disussion: 
+                  https://jsonforms.discourse.group/t/ignored-call-to-confirm-the-document-is-sandboxed-and-the-allow-modals-keyword-is-not-set/1400/3
+                -->
+                <script>window.confirm = () => true</script>
 
                 </head>
                 <body>
@@ -62,5 +75,5 @@ export default class BPMNlowEditorProvider extends GlspEditorProvider {
                     <script src="${webviewScriptSourceUri}"></script>
                 </body>
             </html>`;
-    }
+  }
 }
