@@ -141,7 +141,7 @@
     ]
   },
   "activationEvents": [
-    "onStartupFinished"
+    "onCustomEditor:bpmn-diagram"
   ],
   "files": [
     "lib",
