@@ -109,6 +109,11 @@
   fill: var(--vscode-sideBar-background);
 }
 
+.helper-line {
+  stroke: var(--vscode-focusBorder);
+  stroke-width: 0.5;
+}
+
 /* **************
  * JSON Forms   *
  ****************/
