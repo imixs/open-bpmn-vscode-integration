@@ -35,7 +35,8 @@
   ],
   "icon": "logo-openbpmn.png",
   "engines": {
-    "vscode": "^1.54.0"
+    "vscode": "^1.54.0",
+    "java": ">=11.0.0"
   },
   "contributes": {
     "customEditors": [

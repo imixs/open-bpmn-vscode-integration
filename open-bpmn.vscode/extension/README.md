@@ -10,3 +10,9 @@ BPMN 2.0 introduces an extensibility mechanism that allows extending standard BP
 Open Source Workflow Engines like [Imixs-Workflow](https://www.imixs.org) integrate Open BPMN into there tooling platforms and extend the core features of BPMN 2.0 with platform specific functionality.
 
 Learn more about the project [here](https://github.com/imixs/open-bpmn).
+
+# Java 11 Support
+
+**Note:** To use Open-BPMN in your Visual Studio Code, Java 11 or a higher version need to be installed on your machine.
+
+To install Java 11 or a higher version, you can download if from teh [Microsoft Download Page](https://learn.microsoft.com/en-us/java/openjdk/download) or you can install it from your operating system's package manager. If you have any questions you will find help in the [Open-BPMN Discussion Forum](https://github.com/imixs/open-bpmn/discussions).
