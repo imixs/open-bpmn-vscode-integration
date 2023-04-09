@@ -14,7 +14,7 @@ You will find general Information about the **Open-BPMN Modeling Tool** [here](h
 
 Open-BPMN can be installed into Visual Studio Code from the latest VSIX extension file:
 
-<h2 align="center"><a href="https://github.com/imixs/open-bpmn-vscode-integration/releases/download/open-bpmn-vscode-integration-0.8.0/open-bpmn-vscode-extension-0.8.0.vsix" >Download: open-bpmn-vscode-extension-0.8.0.vsix</a></h2>
+<h2 align="center"><a href="https://github.com/imixs/open-bpmn-vscode-integration/releases/download/open-bpmn-vscode-integration-1.0.3/open-bpmn-vscode-extension-1.0.3.vsix" >Download: open-bpmn-vscode-extension-1.0.3.vsix</a></h2>
 
 # Development
 
