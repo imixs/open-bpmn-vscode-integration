@@ -1,7 +1,7 @@
 **Open BPMN** is a free and open modeling platform to create and maintain business models based on the BPMN 2.0 standard. **Open BPMN** can be used by business analysts to design a top level business process, as also by architects and developers to model the technical details of complex processing logic.
 Further more, **Open BPMN** provides an extension mechanism to adapt the modeling platform to the individual requirements in any business process project.
 
-<img width="650" src="https://github.com/imixs/open-bpmn/raw/master/doc/images/imixs-bpmn-001.png" />
+<img width="650" src="https://www.open-bpmn.org/images/imixs-bpmn-001.png" />
 
 # Extensibility
 
