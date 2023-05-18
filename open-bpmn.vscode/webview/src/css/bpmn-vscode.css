@@ -152,3 +152,7 @@
   background: var(--vscode-editorHoverWidget-statusBarBackground);
   color: var(--vscode-titleBar-activeForeground);
 }
+
+.bpmn-properties-body .control.text-file-editor > label .file-selector {
+  color: var(--vscode-focusBorder);
+}
