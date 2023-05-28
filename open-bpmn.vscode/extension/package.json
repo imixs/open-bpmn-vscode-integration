@@ -1,7 +1,7 @@
 {
   "name": "open-bpmn-vscode-extension",
   "private": "true",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Free BPMN 2.0 modeling tool to create and edit .bpmn files",
   "displayName": "Open-BPMN",
   "publisher": "open-bpmn",
