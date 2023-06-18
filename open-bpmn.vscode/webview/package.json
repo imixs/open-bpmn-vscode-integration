@@ -1,7 +1,7 @@
 {
   "name": "open-bpmn-vscode-webview",
   "private": "true",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "VS-Code Integration for Open-BPMN",
   "displayName": "Open-BPMN VSCode Integration Webview",
   "license": "(EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0)",
