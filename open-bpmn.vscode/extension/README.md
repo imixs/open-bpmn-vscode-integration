@@ -9,7 +9,7 @@ BPMN 2.0 introduces an extensibility mechanism that allows extending standard BP
 
 Open Source Workflow Engines like [Imixs-Workflow](https://www.imixs.org) integrate Open BPMN into there tooling platforms and extend the core features of BPMN 2.0 with platform specific functionality.
 
-Learn more about the project [here](https://github.com/imixs/open-bpmn).
+Learn more about the project [here](https://www.open-bpmn.org).
 
 # Java 11 Support
 
