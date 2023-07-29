@@ -1,7 +1,7 @@
 {
   "name": "open-bpmn-vscode-extension",
   "private": "true",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Free BPMN 2.0 modeling tool to create and edit .bpmn files",
   "displayName": "Open-BPMN",
   "publisher": "open-bpmn",
@@ -152,8 +152,8 @@
   "dependencies": {
     "@vscode/codicons": "^0.0.25",
     "reflect-metadata": "^0.1.13",
-    "sprotty-vscode-protocol": "0.3.0",
-    "@eclipse-glsp/vscode-integration": "1.1.0-RC04"
+    "@eclipse-glsp/vscode-integration": "1.1.0-RC10",
+    "inversify": "^6.0.1"
   },
   "main": "./lib/index",
   "devDependencies": {
@@ -163,9 +163,6 @@
     "ts-node": "^10.8.2",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0"
-  },
-  "resolutions": {
-    "**/sprotty": "0.13.0-next.f4445dd.342"
   },
   "scripts": {
     "build": "tsc -b",

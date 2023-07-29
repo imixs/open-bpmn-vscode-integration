@@ -98,6 +98,17 @@ To build the project and generate a VSIX extension file run:
 
     $ ./build.sh
 
+With in VS-Code you will find two differnt launch options that can be used during development. 
+
+**Open-BPMN VS-Code Extension (without Server)**
+
+This VS-Code launch option expects that you have already started the Open-BPMN server host manually within VSode. This option is good for testing and debugging the server part
+
+**Open-BPMN VS-Code Extension** 
+
+This s VS-Code launch option starts the server and the VS-Code extension. This simulates how the extension will work without exernal servers. The extension starts the configured glsp-sever part form a .jar file.
+
+
 ## Build the Webview
 
 To build the webview only run from the project root:
