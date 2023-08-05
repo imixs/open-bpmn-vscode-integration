@@ -34,6 +34,10 @@
 }
 
 /* BPMN Elements */
+.bpmnedge > .sprotty-label {
+  fill: var(--vscode-titleBar-activeForeground);
+}
+
 .pool > .sprotty-node {
   fill: var(--vscode-sideBar-background);
   stroke: var(--vscode-focusBorder);
@@ -105,9 +109,11 @@
   background-color: var(--vscode-button-hoverBackground);
 }
 
-.BPMNLabel > .sprotty-node.mouseover {
-  fill: var(--vscode-sideBar-background);
+.control>.validation {
+  font-size: var(--vscode-ui-font-size1);
+  font-family: var(--vscode-ui-font-family);
 }
+
 
 .helper-line {
   stroke: var(--vscode-focusBorder);
@@ -155,4 +161,11 @@
 
 .bpmn-properties-body .control.text-file-editor > label .file-selector {
   color: var(--vscode-focusBorder);
+}
+
+.BPMNLabel > .bpmn-text-node pre {
+  color: var(--vscode-titleBar-activeForeground);
+}
+.BPMNLabel > .sprotty-node.mouseover {
+  fill: var(--vscode-sideBar-background);
 }
