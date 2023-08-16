@@ -177,9 +177,13 @@ The publishing process can take some minutes. To verify the status open:
 
 To tag the new release and push the tag to Github using VS-Code
 
-    Git: Create Tag
-     -> choose open-bpmn-vscode-integration
-     -> add tag name - e.g. 'open-bpmn-vscode-integration-1.0.2'
-    Git: Push Tags
+List version
 
+    $ git tag
+
+Tag
+
+    $ git tag -a open-bpmn-vscode-integration-1.0.13  -m "next version"
+	$ git push origin open-bpmn-vscode-integration-1.0.13
+   
 After creating the tag, upgrade the version numbers in the package.json and lerna.json files!
