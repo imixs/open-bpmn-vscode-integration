@@ -29,7 +29,9 @@
     }
   ],
   "scripts": {
-    "build": "tsc -b && webpack --mode=development",
+    "build": "tsc -b && yarn bundle",
+    "bundle": "webpack",
+    "bundle:prod": "webpack --config ./webpack.prod.js",
     "clean": "rimraf lib tsconfig.tsbuildinfo ",
     "lint": "eslint --ext .ts,.tsx ./src",
     "lint:ci": "yarn lint -o eslint.xml -f checkstyle",
@@ -48,8 +50,8 @@
     "style-loader": "^3.3.1",
     "ts-loader": "^9.4.2",
     "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"  
   }
-
-
 }

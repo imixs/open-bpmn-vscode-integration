@@ -142,12 +142,7 @@
     ]
   },
   "activationEvents": [
-    "onCustomEditor:bpmn-diagram"
-  ],
-  "files": [
-    "lib",
-    "extension",
-    "server"
+    "onStartupFinished"
   ],
   "dependencies": {
     "@vscode/codicons": "^0.0.25",
@@ -171,6 +166,7 @@
     "lint": "eslint --ext .ts,.tsx ./src",
     "lint:ci": "yarn lint -o eslint.xml -f checkstyle",
     "prepare": "yarn clean && yarn build",
+    "package": "vsce package --yarn",
     "watch": "tsc -w"
   },
   "workspaces": {
