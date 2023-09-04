@@ -114,7 +114,6 @@
   font-family: var(--vscode-ui-font-family);
 }
 
-
 .helper-line {
   stroke: var(--vscode-focusBorder);
   stroke-width: 0.5;
@@ -163,8 +162,8 @@
   color: var(--vscode-focusBorder);
 }
 
-.BPMNLabel > .bpmn-text-node pre {
-  color: var(--vscode-titleBar-activeForeground);
+.BPMNLabel .bpmn-text-node text {
+  fill: var(--vscode-titleBar-activeForeground);
 }
 .BPMNLabel > .sprotty-node.mouseover {
   fill: var(--vscode-sideBar-background);
