@@ -1,4 +1,5 @@
 {
+  "version": "1.0.16",
   "private": true,
   "workspaces": [
     "open-bpmn.vscode/*"
@@ -19,21 +20,20 @@
     "vscode": "yarn --cwd open-bpmn.vscode/extension",
     "watch": "lerna run --parallel watch"
   },
+  "resolutions": {
+    "@open-bpmn/open-bpmn-glsp": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-glsp/",
+    "@open-bpmn/open-bpmn-model": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-model/",
+    "@open-bpmn/open-bpmn-properties": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-properties/"
+  },
   "devDependencies": {
     "@eclipse-glsp/dev": "next",
     "@types/node": "16",
     "@types/vscode": "^1.54.0",
     "lerna": "^6.6.2",
-    "typescript": "^5.0.4"  
+    "typescript": "^5.0.4"
   },
-  "resolutions": {
-    "@open-bpmn/open-bpmn-model": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-model/",
-    "@open-bpmn/open-bpmn-glsp": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-glsp/",
-    "@open-bpmn/open-bpmn-properties": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-properties/"
-  }, 
   "engines": {
     "node": ">=16.11.0",
     "yarn": ">=1.7.0 <2.x.x"
-  },
-  "version": "1.0.15"
+  }
 }

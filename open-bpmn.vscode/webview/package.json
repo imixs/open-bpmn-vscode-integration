@@ -1,10 +1,9 @@
 {
   "name": "open-bpmn-vscode-webview",
-  "private": "true",
-  "version": "1.0.15",
-  "description": "VS-Code Integration for Open-BPMN",
   "displayName": "Open-BPMN VSCode Integration Webview",
-  "license": "(EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0)",
+  "version": "1.0.16",
+  "private": "true",
+  "description": "VS-Code Integration for Open-BPMN",
   "keywords": [
     "vscode",
     "graph",
@@ -14,12 +13,13 @@
   ],
   "homepage": "https://www.open-bpmn.org",
   "bugs": "https://github.com/imixs/open-bpmn-vscode-integration/issues",
-  "author": {
-    "name": "Imixs-Workflow"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/imixs/open-bpmn-vscode-integration.git"
+  },
+  "license": "(EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0)",
+  "author": {
+    "name": "Imixs-Workflow"
   },
   "contributors": [
     {
@@ -37,21 +37,21 @@
     "lint:ci": "yarn lint -o eslint.xml -f checkstyle",
     "prepare": "yarn clean && yarn build",
     "watch": "tsc -w"
-  },  
+  },
   "devDependencies": {
-    "@open-bpmn/open-bpmn-glsp": "1.0.3",
     "@eclipse-glsp/vscode-integration-webview": "1.1.0-RC10",
+    "@open-bpmn/open-bpmn-glsp": "1.0.3",
     "@vscode/codicons": "^0.0.25",
     "circular-dependency-plugin": "^5.2.2",
     "css-loader": "^6.7.1",
     "ignore-loader": "^0.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "reflect-metadata": "^0.1.13",
     "source-map-loader": "^4.0.1",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.4.2",
     "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"  
+    "webpack-cli": "^5.0.1"
   }
 }

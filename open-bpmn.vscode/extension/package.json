@@ -1,25 +1,13 @@
 {
   "name": "open-bpmn-vscode-extension",
-  "private": "true",
-  "version": "1.0.15",
-  "description": "Free BPMN 2.0 modeling tool to create and edit .bpmn files",
   "displayName": "Open-BPMN",
-  "publisher": "open-bpmn",
-  "homepage": "https://github.com/imixs/open-bpmn/",
-  "bugs": "https://github.com/imixs/open-bpmn/issues",
-  "author": {
-    "name": "Imixs-Workflow"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/imixs/open-bpmn-vscode-integration.git"
-  },
-  "contributors": [
-    {
-      "name": "Imixs-Workflow Project",
-      "email": "info@imixs.com",
-      "url": "https://www.imixs.org/"
-    }
+  "version": "1.0.16",
+  "private": "true",
+  "description": "Free BPMN 2.0 modeling tool to create and edit .bpmn files",
+  "categories": [
+    "Programming Languages",
+    "Visualization",
+    "Education"
   ],
   "keywords": [
     "BPMN",
@@ -28,31 +16,40 @@
     "diagram",
     "Business process analysis"
   ],
-  "categories": [
-    "Programming Languages",
-    "Visualization",
-    "Education"
+  "homepage": "https://github.com/imixs/open-bpmn/",
+  "bugs": "https://github.com/imixs/open-bpmn/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imixs/open-bpmn-vscode-integration.git"
+  },
+  "author": {
+    "name": "Imixs-Workflow"
+  },
+  "contributors": [
+    {
+      "name": "Imixs-Workflow Project",
+      "email": "info@imixs.com",
+      "url": "https://www.imixs.org/"
+    }
   ],
-  "icon": "logo-openbpmn.png",
-  "engines": {
-    "vscode": "^1.54.0",
-    "java": ">=11.0.0"
+  "publisher": "open-bpmn",
+  "main": "./lib/index",
+  "workspaces": {
+    "packages": [
+      "**/open-bpmn-vscode-webview"
+    ]
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf lib tsconfig.tsbuildinfo ",
+    "download:Server": "ts-node scripts/download.ts",
+    "lint": "eslint --ext .ts,.tsx ./src",
+    "lint:ci": "yarn lint -o eslint.xml -f checkstyle",
+    "package": "vsce package --yarn",
+    "prepare": "yarn clean && yarn build",
+    "watch": "tsc -w"
   },
   "contributes": {
-    "customEditors": [
-      {
-        "viewType": "bpmn-diagram",
-        "displayName": "BPMN 2.0 Diagram Editor",
-        "selector": [
-          {
-            "filenamePattern": "*.bpmn"
-          },
-          {
-            "filenamePattern": "*.bpmn2"
-          }
-        ]
-      }
-    ],
     "commands": [
       {
         "command": "bpmn.fit",
@@ -79,10 +76,44 @@
         "enablement": "activeCustomEditorId == 'bpmn-diagram'"
       }
     ],
-    "submenus": [
+    "customEditors": [
       {
-        "id": "bpmn.editor.title",
-        "label": "Diagram"
+        "viewType": "bpmn-diagram",
+        "displayName": "BPMN 2.0 Diagram Editor",
+        "selector": [
+          {
+            "filenamePattern": "*.bpmn"
+          },
+          {
+            "filenamePattern": "*.bpmn2"
+          }
+        ]
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "alt+f",
+        "mac": "alt+f",
+        "command": "bpmn.fit",
+        "when": "activeCustomEditorId == 'bpmn-diagram'"
+      },
+      {
+        "key": "alt+c",
+        "mac": "alt+c",
+        "command": "bpmn.center",
+        "when": "activeCustomEditorId == 'bpmn-diagram'"
+      },
+      {
+        "key": "alt+a",
+        "mac": "alt+a",
+        "command": "bpmn.selectAll",
+        "when": "activeCustomEditorId == 'bpmn-diagram'"
+      },
+      {
+        "key": "alt+p",
+        "mac": "alt+p",
+        "command": "bpmn.showProperties",
+        "when": "activeCustomEditorId == 'bpmn-diagram' && bpmn.editorSelectedElementsAmount == 1"
       }
     ],
     "menus": {
@@ -114,30 +145,10 @@
         }
       ]
     },
-    "keybindings": [
+    "submenus": [
       {
-        "key": "alt+f",
-        "mac": "alt+f",
-        "command": "bpmn.fit",
-        "when": "activeCustomEditorId == 'bpmn-diagram'"
-      },
-      {
-        "key": "alt+c",
-        "mac": "alt+c",
-        "command": "bpmn.center",
-        "when": "activeCustomEditorId == 'bpmn-diagram'"
-      },
-      {
-        "key": "alt+a",
-        "mac": "alt+a",
-        "command": "bpmn.selectAll",
-        "when": "activeCustomEditorId == 'bpmn-diagram'"
-      },
-      {
-        "key": "alt+p",
-        "mac": "alt+p",
-        "command": "bpmn.showProperties",
-        "when": "activeCustomEditorId == 'bpmn-diagram' && bpmn.editorSelectedElementsAmount == 1"
+        "id": "bpmn.editor.title",
+        "label": "Diagram"
       }
     ]
   },
@@ -145,33 +156,22 @@
     "onStartupFinished"
   ],
   "dependencies": {
-    "@vscode/codicons": "^0.0.25",
-    "reflect-metadata": "^0.1.13",
     "@eclipse-glsp/vscode-integration": "1.1.0-RC10",
-    "inversify": "^6.0.1"
+    "@vscode/codicons": "^0.0.25",
+    "inversify": "^6.0.1",
+    "reflect-metadata": "^0.1.13"
   },
-  "main": "./lib/index",
   "devDependencies": {
     "@types/vscode": "^1.54.0",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
     "path": "^0.12.7",
     "ts-loader": "^6.2.1",
-    "ts-node": "^10.8.2",
-    "@typescript-eslint/eslint-plugin": "^5.20.0",
-    "@typescript-eslint/parser": "^5.20.0"
+    "ts-node": "^10.8.2"
   },
-  "scripts": {
-    "build": "tsc -b",
-    "clean": "rimraf lib tsconfig.tsbuildinfo ",
-    "download:Server": "ts-node scripts/download.ts",
-    "lint": "eslint --ext .ts,.tsx ./src",
-    "lint:ci": "yarn lint -o eslint.xml -f checkstyle",
-    "prepare": "yarn clean && yarn build",
-    "package": "vsce package --yarn",
-    "watch": "tsc -w"
+  "engines": {
+    "java": ">=11.0.0",
+    "vscode": "^1.54.0"
   },
-  "workspaces": {
-    "packages": [
-      "**/open-bpmn-vscode-webview"
-    ]
-  }
+  "icon": "logo-openbpmn.png"
 }
