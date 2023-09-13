@@ -41,18 +41,29 @@
 .pool > .sprotty-node {
   fill: var(--vscode-sideBar-background);
   stroke: var(--vscode-focusBorder);
-  outline-color: var(--vscode-focusBorder);
 }
-.pool .header {
-  fill: var(--vscode-titleBar-activeBackground);
-}
-.lane > .sprotty-node {
+.pool > .sprotty-node.mouseover {
   stroke: var(--vscode-focusBorder);
-  outline-color: var(--vscode-focusBorder);
+}
+.pool>.pool_header {
+  fill: var(--vscode-titleBar-activeBackground);
+  stroke: var(--vscode-focusBorder);
+
+}
+.pool .pool_header text {
+  fill: var(--vscode-titleBar-activeForeground);
 }
 
-.pool .header text {
+.lane>.lane_header {
+  fill: var(--vscode-titleBar-activeBackground);
+}
+
+.lane .lane_header text {
   fill: var(--vscode-titleBar-activeForeground);
+}
+
+.lane-divider>polyline {
+  stroke: var(--vscode-focusBorder);
 }
 
 .dataObject > .sprotty-node {
@@ -81,11 +92,7 @@
   color: var(--vscode-titleBar-activeForeground);
   border-top: 1px solid var(--vscode-focusBorder);
 }
-/*
-.categorization > .categorization-master {
-  background: var(--vscode-sideBar-background) !important;
-}
-*/
+
 .bpmn-properties-body .categorization-master {
   background: var(--vscode-titleBar-activeBackground);
 }
