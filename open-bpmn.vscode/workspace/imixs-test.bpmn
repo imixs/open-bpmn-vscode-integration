@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<bpmn2:definitions xmlns:BPMN2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:imixs="http://www.imixs.org/bpmn2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="org.openbpmn" exporterVersion="1.0.0" targetNamespace="http://org.openbpmn" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL">
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:BPMN2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:imixs="http://www.imixs.org/bpmn2" xmlns:open-bpmn="http://open-bpmn.org/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="org.openbpmn" exporterVersion="1.0.0" targetNamespace="http://org.openbpmn">
   <bpmn2:process id="process_1" name="Default Process" processType="Public">
     <bpmn2:documentation id="documentation_mxAnbQ"/>
     <bpmn2:task id="task_Pu621w" imixs:processid="100" name="Task-1">
+      <bpmn2:extensionElements>
+        <imixs:item name="form.definition" type="xs:string">
+          <imixs:value open-bpmn:file-link="file://form.xml"><![CDATA[<myform>some test 2</myform>]]></imixs:value>
+        </imixs:item>
+      </bpmn2:extensionElements>
       <bpmn2:documentation id="documentation_03Ik3g"/>
       <bpmn2:outgoing>SequenceFlow_gepbeQ</bpmn2:outgoing>
     </bpmn2:task>
@@ -22,7 +27,7 @@
       <bpmndi:BPMNShape bpmnElement="event_0krFGA" id="BPMNShape_W0BmxA">
         <dc:Bounds height="36.0" width="36.0" x="297.0" y="45.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_yN9ydw">
-          <dc:Bounds height="16.0" width="100.0" x="265.0" y="84.0"/>
+          <dc:Bounds height="20.0" width="100.0" x="265.0" y="84.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="SequenceFlow_gepbeQ" id="BPMNEdge_csODHQ" sourceElement="BPMNShape_StPfPA" targetElement="BPMNShape_W0BmxA">
