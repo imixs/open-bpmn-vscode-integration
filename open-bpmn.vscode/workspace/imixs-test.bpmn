@@ -5,7 +5,7 @@
     <bpmn2:task id="task_Pu621w" imixs:processid="100" name="Task-1">
       <bpmn2:extensionElements>
         <imixs:item name="form.definition" type="xs:string">
-          <imixs:value open-bpmn:file-link="file://form.xml"><![CDATA[<myform>some test 2</myform>]]></imixs:value>
+          <imixs:value open-bpmn:file-link="file://form.xml"><![CDATA[<myform>some test 32</myform>]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:documentation id="documentation_03Ik3g"/>
