@@ -4,6 +4,6 @@
   "groupId": "org.imixs.bpmn",
   "artifactId": "imixs-open-bpmn.server",
   "version": "0.2.0",
-  "isSnapShot": true,
+  "isSnapShot": false,
   "classifier": "glsp"
 }
