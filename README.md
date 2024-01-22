@@ -187,3 +187,13 @@ Tag
 	$ git push origin open-bpmn-vscode-integration-1.0.13
    
 After creating the tag, upgrade the version numbers in the package.json and lerna.json files!
+
+
+# VSCE
+
+To build the project you need to install the [vsce](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) tool first.
+
+Run: 
+
+    $ npm install -g typescript 
+    $ npm install -g @vscode/vsce

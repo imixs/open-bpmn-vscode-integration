@@ -6,10 +6,13 @@
 {
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true,
-    "source.fixAll.eslint": true
+    "source.organizeImports": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
-  "eslint.validate": ["javascript", "typescript"],
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
   "prettier.prettierPath": "node_modules/prettier",
   "search.exclude": {
     "**/node_modules": true,
@@ -50,7 +53,10 @@
       "ul_multi": 3
     },
     "no-inline-html": {
-      "allowed_elements": ["details", "summary"]
+      "allowed_elements": [
+        "details",
+        "summary"
+      ]
     }
   }
 }
