@@ -49,7 +49,7 @@
     "build": "tsc -b && yarn bundle",
     "bundle": "webpack",    
     "bundle:prod": "webpack --config ./webpack.prod.js",    
-    "clean": "rimraf lib tsconfig.tsbuildinfo pack",
+    "clean": "rimraf lib tsconfig.tsbuildinfo dist",
     "lint": "eslint --ext .ts,.tsx ./src",
     "lint:ci": "yarn lint -o eslint.xml -f checkstyle",
     "package": "vsce package --yarn",
@@ -176,7 +176,6 @@
     "ts-loader": "^9.4.4",
     "ts-node": "^10.8.2",
     "webpack-merge": "^5.9.0",
-
     "open-bpmn-vscode-webview": "1.1.0"   
   },
   "engines": {
