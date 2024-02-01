@@ -58,15 +58,15 @@ export default class BPMNlowEditorProvider extends GlspEditorProvider {
                 <head>
                     <meta charset="UTF-8">
                     <meta name="viewport" content="width=device-width, height=device-height">
-					<meta http-equiv="Content-Security-Policy" content="
-                default-src http://*.fontawesome.com  ${webview.cspSource} 'unsafe-inline' 'unsafe-eval';
-                ">
-				<link href="${codiconsUri}" rel="stylesheet" />
-                <!-- disable modal confirm dialog 
-                  See disussion: 
-                  https://jsonforms.discourse.group/t/ignored-call-to-confirm-the-document-is-sandboxed-and-the-allow-modals-keyword-is-not-set/1400/3
-                -->
-                <script>window.confirm = () => true</script>
+					          <meta http-equiv="Content-Security-Policy" 
+                        content="default-src http://*.fontawesome.com  ${webview.cspSource} 'unsafe-inline' 'unsafe-eval';
+                        ">
+				            <link href="${codiconsUri}" rel="stylesheet" />
+                    <!-- disable modal confirm dialog 
+                      See disussion: 
+                      https://jsonforms.discourse.group/t/ignored-call-to-confirm-the-document-is-sandboxed-and-the-allow-modals-keyword-is-not-set/1400/3
+                    -->
+                    <script>window.confirm = () => true</script>
 
                 </head>
                 <body>

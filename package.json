@@ -1,12 +1,14 @@
 {
-  "version": "1.0.23",
+  "version": "1.1.0",
   "private": true,
   "workspaces": [
-    "open-bpmn.vscode/*"
+    "open-bpmn.vscode/webview",
+    "open-bpmn.vscode/extension"
   ],
   "scripts": {
     "all": "yarn install && yarn lint",
     "build": "lerna run build",
+    "bundle": " lerna run bundle",
     "check:headers": "glsp checkHeaders . -t lastCommit",
     "check:pr": "yarn all && yarn check:headers",
     "clean": "lerna run clean && rimraf logs/*.log",
@@ -26,7 +28,7 @@
     "@open-bpmn/open-bpmn-properties": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-properties/"
   },
   "devDependencies": {
-    "@eclipse-glsp/dev": "next",
+    "@eclipse-glsp/dev": "2.0.0",
     "@types/node": "16",
     "@types/vscode": "^1.54.0",
     "lerna": "^6.6.2",

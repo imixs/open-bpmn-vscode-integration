@@ -13,17 +13,18 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
-import { GLSPDiagramIdentifier, GLSPStarter } from '@eclipse-glsp/vscode-integration-webview';
+import { ContainerConfiguration } from '@eclipse-glsp/client';
+import { GLSPStarter } from '@eclipse-glsp/vscode-integration-webview';
 import '@eclipse-glsp/vscode-integration-webview/css/glsp-vscode.css';
-import { createBPMNDiagramContainer } from '@open-bpmn/open-bpmn-glsp';
+import { createBPMNDiagramContainer } from '@open-bpmn/open-bpmn-glsp/lib';
 import { Container } from 'inversify';
 
 // css styles
 import './css/bpmn-vscode.css';
 
 class BPMNGLSPStarter extends GLSPStarter {
-    createContainer(diagramIdentifier: GLSPDiagramIdentifier): Container {
-        return createBPMNDiagramContainer(diagramIdentifier.clientId);
+    createContainer(...containerConfiguration: ContainerConfiguration): Container {
+        return createBPMNDiagramContainer(...containerConfiguration);
     }
 }
 

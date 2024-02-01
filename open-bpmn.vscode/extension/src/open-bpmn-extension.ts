@@ -59,8 +59,8 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 
   // Wrap server with quickstart component
   const bpmnServer = new SocketGlspVscodeServer({
-            clientId: 'glsp.workflow',
-            clientName: 'workflow',
+            clientId: 'glsp.bpmn',
+            clientName: 'bpmn',
             connectionOptions: {
                 port: serverProcess?.getPort() || JSON.parse(process.env.GLSP_SERVER_PORT || DEFAULT_SERVER_PORT),
                 path: process.env.GLSP_WEBSOCKET_PATH
