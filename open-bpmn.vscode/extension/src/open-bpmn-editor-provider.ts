@@ -36,7 +36,7 @@ export default class BPMNlowEditorProvider extends GlspEditorProvider {
     const webview = webviewPanel.webview;
     const extensionUri = this.extensionContext.extensionUri;
     const webviewScriptSourceUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(extensionUri, "pack", "webview.js")
+      vscode.Uri.joinPath(extensionUri, "dist", "webview.js")
     );
     const codiconsUri = webview.asWebviewUri(
       vscode.Uri.joinPath(
