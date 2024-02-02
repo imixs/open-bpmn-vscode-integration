@@ -258,7 +258,7 @@
     sinon "^15.1.0"
     ts-node "^10.9.1"
 
-"@eclipse-glsp/config@2.0.0", "@eclipse-glsp/config@~2.0.0":
+"@eclipse-glsp/config@~2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@eclipse-glsp/config/-/config-2.0.0.tgz#52bef6d707dee39de516a56ed8e735f616bc0b6d"
   integrity sha512-xWcI7EmoCuG5qbRaUTt3mMeMyXTnmkK3ENdK0M1LhW89nBCDplTSSl7f0L6xioUiFjk8FEQawr7AK/BZGvckmg==

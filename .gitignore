@@ -31,7 +31,9 @@ buildNumber.properties
 
 ## Nodejs ##
 lib
+out
+dist
 node_modules
-pack
-*.tsbuildinfo
+tsconfig.tsbuildinfo
 package-lock.json
+
