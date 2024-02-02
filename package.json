@@ -1,36 +1,32 @@
 {
   "version": "1.1.0",
   "private": true,
+
+  "scripts": {
+    "all": "yarn install && yarn lint",
+    "build": "lerna run build",
+    "clean": "lerna run clean",
+    "lint": "lerna run lint",
+    "lint:ci": "lerna run lint:ci",
+    "prepare": "lerna run prepare",
+    "watch": "lerna run --parallel watch"
+  },
+
   "workspaces": [
     "open-bpmn.vscode/webview",
     "open-bpmn.vscode/extension"
   ],
-  "scripts": {
-    "all": "yarn install && yarn lint",
-    "build": "lerna run build",
-    "bundle": " lerna run bundle",
-    "check:headers": "glsp checkHeaders . -t lastCommit",
-    "check:pr": "yarn all && yarn check:headers",
-    "clean": "lerna run clean && rimraf logs/*.log",
-    "lint": "lerna run lint",
-    "lint:ci": "lerna run lint:ci",
-    "prepare": "lerna run prepare",
-    "publish:latest": "lerna publish from-git --no-git-reset --no-git-tag-version --no-verify-access --no-push",
-    "publish:next": "SHA=$(git rev-parse --short HEAD) && lerna publish preminor --exact --canary --preid next.${SHA} --dist-tag next --no-git-reset --no-git-tag-version --no-push --ignore-scripts --yes --no-verify-access",
-    "publish:prepare": "lerna version --ignore-scripts --yes --no-push",
-    "upgrade:next": "yarn upgrade -p \"@eclipse-glsp.*|sprotty.*\" --next ",
-    "vscode": "yarn --cwd open-bpmn.vscode/extension",
-    "watch": "lerna run --parallel watch"
-  },
+
   "resolutions": {
     "@open-bpmn/open-bpmn-glsp": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-glsp/",
     "@open-bpmn/open-bpmn-model": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-model/",
-    "@open-bpmn/open-bpmn-properties": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-properties/"
-  },
+    "@open-bpmn/open-bpmn-properties": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-properties/",
+    "string-width": "4.2.3"
+  },  
   "devDependencies": {
-    "@eclipse-glsp/dev": "2.0.0",
-    "@types/node": "16",
-    "@types/vscode": "^1.54.0",
+    "@eclipse-glsp/dev": "~2.0.0",
+    "@eclipse-glsp/config": "2.0.0",
+    "inversify": "6.0.2",
     "lerna": "^6.6.2",
     "typescript": "^5.2.2"
   },

@@ -46,7 +46,7 @@
     ]
   },
   "scripts": {
-    "build": "tsc -b && yarn bundle",
+    "build": "tsc && yarn bundle",
     "bundle": "webpack",    
     "bundle:prod": "webpack --config ./webpack.prod.js",    
     "clean": "rimraf lib tsconfig.tsbuildinfo dist",
@@ -169,12 +169,15 @@
     "@eclipse-glsp/vscode-integration": "2.1.0-next.74",
     "@types/node": "16.x",
     "@types/vscode": "^1.54.0",
+    "@vscode/vsce": "^2.19.0",
     "copy-webpack-plugin": "^11.0.0",
     "path": "^0.12.7",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^2.6.3",
     "ts-loader": "^9.4.4",
     "ts-node": "^10.8.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
     "webpack-merge": "^5.9.0",
     "open-bpmn-vscode-webview": "1.1.0"   
   },
