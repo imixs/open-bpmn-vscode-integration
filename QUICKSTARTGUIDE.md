@@ -39,6 +39,18 @@ First of all you VS-Code integration project should provide the following direct
 
 As you can see there are two modules: the /extension module and the /webview module
 
+The Root package.json file should at least contain the following `devDependencies`. This ensures that you use the correct versions of typescript, eslint and prettier configuration.
+Consuming the `@eclipse-glsp/dev` package is the most straight forward approach as you don't have to worry about configuration
+
+```
+  "devDependencies": {
+    "@eclipse-glsp/dev": "~2.0.0",
+    "inversify": "6.0.2",
+    "lerna": "^6.6.2",
+    "typescript": "^5.2.2"
+  },
+```
+
 ## 2) The Webview Module
 
 The Webview Module provides only the `GLSPStarter` class and the 'index.ts' file to launch the Digaram Container. It is important that you have already a implementation of the class `createMyDiagramContainer` in your main GLSP Diagram poject. This creation class can now be used in the GLSP Starter to initalize your Diagram. So the code is quite simple here: 
