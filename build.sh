@@ -11,12 +11,13 @@ rm -R open-bpmn.vscode/extension/node_modules
 rm -R open-bpmn.vscode/extension/pack
 
 echo "==> build webview..."
-yarn install
+#yarn install
+yarn all
 
-echo "==> build VSIX extension..."
-cd open-bpmn.vscode/extension
-yarn install
-vsce package --yarn
-cd ../..
+#echo "==> build VSIX extension..."
+#cd open-bpmn.vscode/extension
+#yarn install
+#vsce package --yarn
+#cd ../..
 
 echo "==> build completed!"

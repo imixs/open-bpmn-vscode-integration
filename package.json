@@ -25,6 +25,8 @@
   },  
   "devDependencies": {
     "@eclipse-glsp/dev": "~2.0.0",
+    "@types/node": "16",
+    "@types/vscode": "^1.54.0",
     "inversify": "6.0.2",
     "lerna": "^6.6.2",
     "typescript": "^5.2.2"

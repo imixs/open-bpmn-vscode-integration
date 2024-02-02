@@ -33,18 +33,10 @@
     }
   ],
   "publisher": "open-bpmn",
-  "main": "./lib/index",
+  "main": "./dist/open-bpmn-extension",
   "files": [
-    "lib",
-    "server",
-    "webview"
+    "dist"
   ],  
-  "workspaces": {
-    "nohoist": [
-      "**/@vscode/codicons",
-      "**/@vscode/codicons/**"
-    ]
-  },
   "scripts": {
     "build": "tsc && yarn bundle",
     "bundle": "webpack",    
@@ -167,8 +159,6 @@
   },  
   "devDependencies": {
     "@eclipse-glsp/vscode-integration": "2.1.0-next.74",
-    "@types/node": "16.x",
-    "@types/vscode": "^1.54.0",
     "@vscode/vsce": "^2.19.0",
     "copy-webpack-plugin": "^11.0.0",
     "path": "^0.12.7",
