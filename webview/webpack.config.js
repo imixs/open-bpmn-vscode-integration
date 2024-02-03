@@ -35,16 +35,15 @@ const config = {
             },
             {
                 test: /\.css$/,
-                exclude: /(codicon|\.useable)\.css$/,
+                exclude: /\.useable\.css$/,
                 use: ['style-loader', 'css-loader']
-            },
-            {
-                test: /codicon.css$/,
-                use: ['ignore-loader']
-            }
+            }            
         ]
     },
     ignoreWarnings: [/Failed to parse source map/, /Can't resolve .* in '.*ws\/lib'/],
+    performance: {
+        hints: false
+    }    
 };
 
 module.exports = config;

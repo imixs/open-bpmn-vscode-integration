@@ -5,6 +5,7 @@
   "scripts": {
     "all": "yarn install && yarn lint",
     "build": "lerna run build",
+    "bundle": " lerna run bundle",
     "clean": "lerna run clean",
     "lint": "lerna run lint",
     "lint:ci": "lerna run lint:ci",
@@ -18,9 +19,7 @@
   ],
 
   "resolutions": {
-    "@open-bpmn/open-bpmn-glsp": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-glsp/",
-    "@open-bpmn/open-bpmn-model": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-model/",
-    "@open-bpmn/open-bpmn-properties": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-properties/",
+   
     "string-width": "4.2.3"
   },  
   "devDependencies": {

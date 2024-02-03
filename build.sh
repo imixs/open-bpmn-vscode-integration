@@ -5,10 +5,11 @@ echo "***************************************"
 
 echo "==> clean workspace..."
 rm -R webview/lib
+rm -R webview/dist
 rm -R webview/node_modules
 rm -R extension/lib
 rm -R extension/node_modules
-rm -R extension/pack
+rm -R extension/dist
 
 echo "==> build webview..."
 #yarn install
