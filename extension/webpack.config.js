@@ -39,9 +39,7 @@ const config = {
     plugins: [
         new CopyPlugin({
             patterns: [
-                {
-                    from: path.resolve(nodeModules, '@open-bpmn')
-                },                
+                             
                 {
                     from: path.resolve(__dirname, '..', 'webview', 'dist')
                 }
