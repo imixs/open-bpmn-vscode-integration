@@ -4,18 +4,18 @@ echo "* Build - Open BPMN vsix.....         *"
 echo "***************************************"
 
 echo "==> clean workspace..."
-rm -R open-bpmn.vscode/webview/lib
-rm -R open-bpmn.vscode/webview/node_modules
-rm -R open-bpmn.vscode/extension/lib
-rm -R open-bpmn.vscode/extension/node_modules
-rm -R open-bpmn.vscode/extension/pack
+rm -R webview/lib
+rm -R webview/node_modules
+rm -R extension/lib
+rm -R extension/node_modules
+rm -R extension/pack
 
 echo "==> build webview..."
 #yarn install
 yarn all
 
 #echo "==> build VSIX extension..."
-#cd open-bpmn.vscode/extension
+#cd extension
 #yarn install
 #vsce package --yarn
 #cd ../..

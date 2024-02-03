@@ -158,7 +158,7 @@
     "@vscode/codicons": "^0.0.25"
   },  
   "devDependencies": {
-    "@eclipse-glsp/vscode-integration": "2.1.0-next.74",
+    "@eclipse-glsp/vscode-integration": "2.0.0",
     "@vscode/vsce": "^2.19.0",
     "copy-webpack-plugin": "^11.0.0",
     "path": "^0.12.7",

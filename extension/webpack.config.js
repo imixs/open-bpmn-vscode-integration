@@ -3,7 +3,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
-const nodeModules = path.resolve(__dirname, '../../node_modules');
+const nodeModules = path.resolve(__dirname, '../node_modules');
 
 /**@type {import('webpack').Configuration}*/
 const config = {

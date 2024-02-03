@@ -10,6 +10,6 @@
   ],
   "include": [
     "**/scripts/",
-    "open-bpmn.vscode/*/src"
+    "*/src"
   ]
 }

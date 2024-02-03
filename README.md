@@ -123,7 +123,7 @@ To package the VS-Code Extension into a `.vsix` file, you first have to install 
 
 To build the extension and create the VSIX file run:
 
-    $ cd open-bpmn.vscode/extension
+    $ cd extension
     $ yarn install
     $ vsce package --yarn
 
@@ -166,7 +166,7 @@ login via the vsce tool. You will be asked for your personal access token:
 
 You can now publish the Open-BPMN extension using vsce with the publish command:
 
-    $ cd open-bpmn.vscode/extension/
+    $ cd extension/
     $ vsce publish
 
 The publishing process can take some minutes. To verify the status open:

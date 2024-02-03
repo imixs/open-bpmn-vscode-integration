@@ -13,8 +13,8 @@
   },
 
   "workspaces": [
-    "open-bpmn.vscode/webview",
-    "open-bpmn.vscode/extension"
+    "webview",
+    "extension"
   ],
 
   "resolutions": {

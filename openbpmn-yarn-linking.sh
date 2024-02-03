@@ -32,8 +32,7 @@ if [[ "$2" != "--unlink" ]]; then
     yarn link
 
     echo '----------- part 2'
-    #cd $baseDir/open-bpmn-vscode-integration/open-bpmn.vscode/webview
-    cd $baseDir/open-bpmn-vscode-integration/open-bpmn.vscode
+    cd $baseDir/open-bpmn-vscode-integration
     yarn link @open-bpmn/open-bpmn-model @open-bpmn/open-bpmn-glsp @open-bpmn/open-bpmn-properties
     
     echo '----------- part 3'

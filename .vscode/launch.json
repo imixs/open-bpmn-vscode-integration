@@ -10,11 +10,11 @@
       "request": "launch",
       "runtimeExecutable": "${execPath}",
       "args": [
-        "${workspaceFolder}/open-bpmn.vscode/workspace",
-        "--extensionDevelopmentPath=${workspaceFolder}/open-bpmn.vscode/extension"
+        "${workspaceFolder}/workspace",
+        "--extensionDevelopmentPath=${workspaceFolder}/extension"
       ],
       "outFiles": [
-        "${workspaceFolder}/open-bpmn.vscode/extension/lib/*.js",
+        "${workspaceFolder}/extension/lib/*.js",
         "${workspaceFolder}/vscode-integration/lib/**/*.js"
       ],
       "sourceMaps": true,
@@ -29,11 +29,11 @@
       "request": "launch",
       "runtimeExecutable": "${execPath}",
       "args": [
-        "${workspaceFolder}/open-bpmn.vscode/workspace",
-        "--extensionDevelopmentPath=${workspaceFolder}/open-bpmn.vscode/extension"
+        "${workspaceFolder}/workspace",
+        "--extensionDevelopmentPath=${workspaceFolder}/extension"
       ],
       "outFiles": [
-        "${workspaceFolder}/open-bpmn.vscode/extension/lib/*.js",
+        "${workspaceFolder}/extension/lib/*.js",
         "${workspaceFolder}/vscode-integration/lib/**/*.js"
       ],
       "sourceMaps": true,

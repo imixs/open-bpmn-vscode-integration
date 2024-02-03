@@ -228,12 +228,12 @@
     file-saver "^2.0.5"
     lodash "4.17.21"
 
-"@eclipse-glsp/client@next":
-  version "2.3.0-next.309"
-  resolved "https://registry.yarnpkg.com/@eclipse-glsp/client/-/client-2.3.0-next.309.tgz#c5c8a13dfc85f6c6ed1426c410091862d348a2f5"
-  integrity sha512-CcZLBiGnQQztxtR1kE802M6D5MYM6o4zT52RV4qzd1rywzjYZS81lprm3+jYmPK66a2fLiSlDXCix3X2zZPCbg==
+"@eclipse-glsp/client@~2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@eclipse-glsp/client/-/client-2.0.0.tgz#1100d7b2de0b4a92f4397417cc196fe7324af0f5"
+  integrity sha512-Bi3Pxv0jgr8uyKTtxivPEfD6nHYPB35a0+eaq5wjxymB3VlX3Fgguy+dAmO9P2FexRN/d4Wh8ZwWhtjC3XP0AQ==
   dependencies:
-    "@eclipse-glsp/sprotty" "2.3.0-next.309+b90a740"
+    "@eclipse-glsp/sprotty" "~2.0.0"
     autocompleter "^9.1.0"
     file-saver "^2.0.5"
     lodash "4.17.21"
@@ -319,10 +319,10 @@
     uuid "7.0.3"
     vscode-jsonrpc "^8.0.2"
 
-"@eclipse-glsp/protocol@2.3.0-next.309+b90a740", "@eclipse-glsp/protocol@next":
-  version "2.3.0-next.309"
-  resolved "https://registry.yarnpkg.com/@eclipse-glsp/protocol/-/protocol-2.3.0-next.309.tgz#e30496338846462be6ef8c91c0f42b0e4bd0875a"
-  integrity sha512-KHF90oL4MTo19HEFlvXCpe9xqk92jU4ezbgNALGa27OZ5NOEJgY02aJrs2od4i6YOF6swRO3pPoGts0WH9dDEQ==
+"@eclipse-glsp/protocol@~2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@eclipse-glsp/protocol/-/protocol-2.0.0.tgz#d09fa068c32dadf678696c987feded1790f3099b"
+  integrity sha512-6vFP2aY0+9AcrWvAtNFzcDX00z/rEFwTzYXg9ucDEYwYn105DUadhMruwSn9rsWLxf2movBzEkLSE2TNOX1PkQ==
   dependencies:
     sprotty-protocol "0.15.0-next.044bba2.13"
     uuid "7.0.3"
@@ -339,12 +339,12 @@
     sprotty "1.0.0"
     sprotty-protocol "1.0.0"
 
-"@eclipse-glsp/sprotty@2.3.0-next.309+b90a740":
-  version "2.3.0-next.309"
-  resolved "https://registry.yarnpkg.com/@eclipse-glsp/sprotty/-/sprotty-2.3.0-next.309.tgz#e987d28caeb5c3cf26b0986fbd7b671066f902e1"
-  integrity sha512-o97h9GcNEvgTNfwh6pw6AnGQF2HenD6UHzuuN4Pj868c+PZmAEk/hY96QBEOnXCiUn1aI4F2mXHq+3OBiWoIQg==
+"@eclipse-glsp/sprotty@~2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@eclipse-glsp/sprotty/-/sprotty-2.0.0.tgz#dc3915a2ec8959ffbc0b518854820d46f7af5cef"
+  integrity sha512-bXnPwYhyw/dOl4YSGcMciBCJp6toYesa0v8U4iDs0P+x7/Q9yMAPBRYKajxKzyuoVs09hvCkNUVEM1e4cRQ1BA==
   dependencies:
-    "@eclipse-glsp/protocol" "2.3.0-next.309+b90a740"
+    "@eclipse-glsp/protocol" "~2.0.0"
     autocompleter "^9.1.0"
     snabbdom "^3.5.1"
     sprotty "1.0.0"
@@ -355,20 +355,20 @@
   resolved "https://registry.yarnpkg.com/@eclipse-glsp/ts-config/-/ts-config-2.0.0.tgz#91ef448f7a63a88b7752098dee47bac3cc66e7aa"
   integrity sha512-Y4XzSzK0pmE9yWoJYjlWKn1pZbxdpcCRH0H1YLE6oRoM7kaNpEqPIEkkHhqweqW/RaxfTSpj/WWqmhso9lWHyg==
 
-"@eclipse-glsp/vscode-integration-webview@2.1.0-next.74":
-  version "2.1.0-next.74"
-  resolved "https://registry.yarnpkg.com/@eclipse-glsp/vscode-integration-webview/-/vscode-integration-webview-2.1.0-next.74.tgz#603f53c3ab4005d2b9353678e79c801f57c21384"
-  integrity sha512-brCG5uyH8hM4vSpHAttbnOlkFexFFCJNcFVEA8mu7zM9pL7tidwdoaAazzN/P+Kjlw6EaS2Hh7fk1/lIhnbn0A==
+"@eclipse-glsp/vscode-integration-webview@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@eclipse-glsp/vscode-integration-webview/-/vscode-integration-webview-2.0.0.tgz#ccf61dbbdbb25b2f1cad3715fe57538a3be9bac5"
+  integrity sha512-fQN57enrqF+J0+ZFNmRYOmV1UMsjakt/1mV2Hu/ccHNZ3JzbH7mZBgm/g0+63mUrWZPaWLl09TxSZGsVjUICrw==
   dependencies:
-    "@eclipse-glsp/client" next
+    "@eclipse-glsp/client" "~2.0.0"
     vscode-messenger-webview "^0.4.5"
 
-"@eclipse-glsp/vscode-integration@2.1.0-next.74":
-  version "2.1.0-next.74"
-  resolved "https://registry.yarnpkg.com/@eclipse-glsp/vscode-integration/-/vscode-integration-2.1.0-next.74.tgz#8b3be252ff082e655c53efe2e2c22f25d48a83d3"
-  integrity sha512-0CtkfBjK2ib8xiD4BFTqn4lZxf+w3mEjmo6tZDfND+eb8xccZfvFltmhYH+6/SbLBUjDYJ5qnsdtjnUI0ytm2Q==
+"@eclipse-glsp/vscode-integration@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@eclipse-glsp/vscode-integration/-/vscode-integration-2.0.0.tgz#f9e198f27f599b7db77a9ab0649591b2711b91a8"
+  integrity sha512-B/y+M7iPc0WS0BDv/CN66YZsaSBqh4TVw6lcAxKIKdHly1R/oOHMIfsCETHZtnyTWxB1YzZ+mragc5yFc29qBA==
   dependencies:
-    "@eclipse-glsp/protocol" next
+    "@eclipse-glsp/protocol" "~2.0.0"
     vscode-jsonrpc "^8.0.2"
     vscode-messenger "^0.4.5"
     ws "^8.13.0"
@@ -3586,7 +3586,7 @@ get-func-name@^2.0.1, get-func-name@^2.0.2:
   resolved "https://registry.yarnpkg.com/get-func-name/-/get-func-name-2.0.2.tgz#0d7cf20cd13fda808669ffa88f4ffc7a3943fc41"
   integrity sha512-8vXOvuE167CtIc3OyItco7N/dpRtBbYOsPsXCz7X/PMnlGjYjSGuZJgM1Y7mmew7BKf9BqvLX2tnOVy1BBUsxQ==
 
-get-intrinsic@^1.0.2, get-intrinsic@^1.1.1, get-intrinsic@^1.1.3, get-intrinsic@^1.2.0, get-intrinsic@^1.2.1, get-intrinsic@^1.2.2:
+get-intrinsic@^1.0.2, get-intrinsic@^1.1.1, get-intrinsic@^1.1.3, get-intrinsic@^1.2.1, get-intrinsic@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/get-intrinsic/-/get-intrinsic-1.2.2.tgz#281b7622971123e1ef4b3c90fd7539306da93f3b"
   integrity sha512-0gSo4ml/0j98Y3lngkFEot/zhiCeWsbYIlZ+uZOVgzLyLaUw7wxUL+nCTP0XJvJg1AXulJRI3UJi8GsbDuxdGA==
@@ -4204,13 +4204,12 @@ ip@^2.0.0:
   integrity sha512-WKa+XuLG1A1R0UWhl2+1XQSi+fZWMsYKffMZTTYsiZaUD8k2yDAj5atimTUD2TZkyCkNEeYE5NhFZmupOGtjYQ==
 
 is-array-buffer@^3.0.1, is-array-buffer@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/is-array-buffer/-/is-array-buffer-3.0.2.tgz#f2653ced8412081638ecb0ebbd0c41c6e0aecbbe"
-  integrity sha512-y+FyyR/w8vfIRq4eQcM1EYgSTnmHXPqaF+IgzgraytCFq5Xh8lllDVmAZolPJiZttZLeFSINPYMaEJ7/vWUa1w==
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/is-array-buffer/-/is-array-buffer-3.0.4.tgz#7a1f92b3d61edd2bc65d24f130530ea93d7fae98"
+  integrity sha512-wcjaerHw0ydZwfhiKbXJWLDY8A7yV7KhjQOpb83hGgGfId/aQa4TOvwyzn2PuswW2gPCYEL/nEAiSVpdOj1lXw==
   dependencies:
     call-bind "^1.0.2"
-    get-intrinsic "^1.2.0"
-    is-typed-array "^1.1.10"
+    get-intrinsic "^1.2.1"
 
 is-arrayish@^0.2.1:
   version "0.2.1"
@@ -8004,7 +8003,6 @@ workerpool@6.2.1:
   integrity sha512-ILEIE97kDZvF9Wb9f6h5aXK4swSlKGUcOEGiIYb2OOu/IrDU9iwj0fD//SsA6E5ibwJxpEvhullJY4Sl4GcpAw==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
-  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
