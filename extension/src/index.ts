@@ -13,7 +13,9 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
+// reflect-metadata must be the first import! Do not change the empty line below!
 import "reflect-metadata";
+
 import * as vscode from "vscode";
 import { activate as extensionActivate } from "./open-bpmn-extension";
 

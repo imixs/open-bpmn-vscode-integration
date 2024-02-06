@@ -13,6 +13,10 @@
  *
  * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
  ********************************************************************************/
+
+// reflect-metadata must be the first import! Do not change the empty line below!
+import "reflect-metadata";
+
 import {
   GlspSocketServerLauncher,
   GlspVscodeConnector,
@@ -21,16 +25,14 @@ import {
 } from '@eclipse-glsp/vscode-integration/node';
 import * as path from "path";
 import * as process from "process";
-import "reflect-metadata";
+
 import * as vscode from "vscode";
 import { BPMNPropertyPanelToggleAction } from "./open-bpmn-actions";
 import BPMNEditorProvider from "./open-bpmn-editor-provider";
 import * as config from "./server-config.json";
 
-
 const DEFAULT_SERVER_PORT = '0';
 const LOG_DIR = path.join(__dirname, '..', '..', '..', '..', 'logs');
-
 const { version, isSnapShot, artifactId } = config;
 const JAVA_EXECUTABLE = path.join(
   __dirname,

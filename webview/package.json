@@ -29,7 +29,7 @@
     }
   ],
   "scripts": {
-    "build": "tsc && yarn bundle",
+    "build": "tsc -b && yarn bundle",
     "bundle": "webpack",
     "bundle:prod": "webpack --config ./webpack.prod.js",
     "clean": "rimraf lib tsconfig.tsbuildinfo dist",
@@ -41,14 +41,15 @@
 
   "devDependencies": {
     "@open-bpmn/open-bpmn-glsp": "1.2.0",
-    "@eclipse-glsp/vscode-integration-webview": "2.1.0-next.74",
+    "@eclipse-glsp/vscode-integration-webview": "^2.1.0",
     "@vscode/codicons": "^0.0.25",
     "circular-dependency-plugin": "^5.2.2",
     "css-loader": "^6.7.1",
     "ignore-loader": "^0.1.2",
+    "process": "0.11.10",
+    "reflect-metadata": "^0.1.13",    
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "reflect-metadata": "^0.1.13",
     "source-map-loader": "^4.0.1",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.4.2",

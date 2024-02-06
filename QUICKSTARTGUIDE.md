@@ -1,11 +1,17 @@
 # How to Integrate a GLSP Diagram in VS-Code
 
-This is a short summary of my own findings in integrating a GLSP Diagram into VS-Code. The GLSP project provides a [VS Code Integration Project](https://github.com/eclipse-glsp/glsp-vscode-integration) that is providing some glue-code to make the integration as simple as possible. But of corse integration can be very different from project to project and can not be provided as an out-of-the-box solution.
+This is a short summary of my own findings in integrating a GLSP Diagram into VS-Code. The GLSP project provides a [VS Code Integration Project](https://github.com/eclipse-glsp/glsp-vscode-integration) that is providing some glue-code to make the integration as simple as possible. But of corse integration can be very different from project to project and can not be provided as an out-of-the-box solution. The following sections provides some tips for integrating a GLSP Disagram into VS-Code.
 
-In general the VS Code integration needs to be embedded in a [web view](https://code.visualstudio.com/api/extension-guides/webview) of a [custom editor](https://code.visualstudio.com/api/extension-guides/custom-editors) VS Code extension.
+In general the VS Code integration needs to be embedded in a [web view](https://code.visualstudio.com/api/extension-guides/webview) of a [custom editor](https://code.visualstudio.com/api/extension-guides/custom-editors) VS Code extension. 
+
+The origin GLSP examples can be found here:
+
+ - [Minimal task example integration for VS Code](https://github.com/eclipse-glsp/glsp-examples/tree/master/project-templates/node-json-vscode/tasklist-vscode)
+ - [Example VS Code extension for the workflow diagram](https://github.com/eclipse-glsp/glsp-vscode-integration/tree/master/example/workflow)
 
 
-The following sections provides some tips for integrating a GLSP Disagram into VS-Code.
+
+
 
 ## 1) Project Structure
 
@@ -75,11 +81,76 @@ class MyGLSPStarter extends GLSPStarter {
 export function launch(): void {
     new MyGLSPStarter();
 }
-
 ```
 
-The Webpack.config.js is important to package all the digaram part in a webpack.js file that can be referred from the Extension module
+The index.ts file simply launches the diagram container:
 
+```javascript
+import 'reflect-metadata';
+
+import { launch } from './app';
+
+launch();
+```
+
+### The Webpack
+
+The Webview module contains a webpack configuration. The `webpack.config.js` file is important to package all the digaram part in a `webpack.js` file that can be referred from the Extension module
+
+```javascript
+// @ts-check
+const path = require('path');
+
+const outputPath = path.resolve(__dirname, './dist');
+
+/**@type {import('webpack').Configuration}*/
+const config = {
+    target: 'web',
+
+    entry: path.resolve(__dirname, 'src/index.ts'),
+    output: {
+        filename: 'webview.js',
+        path: outputPath
+    },
+    devtool: 'eval-source-map',
+    mode: 'development',
+
+    resolve: {
+        fallback: {
+            fs: false,
+            net: false,
+        },
+        alias: {
+            process: 'process/browser'
+        },        
+        extensions: ['.ts', '.tsx', '.js']
+    },
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                use: ['ts-loader']
+            },
+            {
+                test: /\.js$/,
+                use: ['source-map-loader'],
+                enforce: 'pre'
+            },
+            {
+                test: /\.css$/,
+                exclude: /\.useable\.css$/,
+                use: ['style-loader', 'css-loader']
+            }            
+        ]
+    },
+    ignoreWarnings: [/Failed to parse source map/, /Can't resolve .* in '.*ws\/lib'/],
+    performance: {
+        hints: false
+    }    
+};
+
+module.exports = config;
+```
 
 ## 2) The Extension Module
 
@@ -161,6 +232,94 @@ export default class MyEditorProvider extends GlspEditorProvider {
 
 The file `my-extensio.ts` contains the method `activate`. This method organizes connection to the server and may provide some additional code to register custom VS-Code menu actions. 
 
+```javascript
+import "reflect-metadata";
+
+import {
+  GlspSocketServerLauncher,
+  GlspVscodeConnector,
+  SocketGlspVscodeServer,
+  configureDefaultCommands
+} from '@eclipse-glsp/vscode-integration/node';
+import * as path from "path";
+import * as process from "process";
+
+import * as vscode from "vscode";
+import MyEditorProvider from "./my-editor-provider";
+import * as config from "./server-config.json";
+
+const DEFAULT_SERVER_PORT = '0';
+const LOG_DIR = path.join(__dirname, '..', '..', '..', '..', 'logs');
+const { version, isSnapShot, artifactId } = config;
+const JAVA_EXECUTABLE = path.join(
+  __dirname,
+  `../server/${artifactId}-${version}${isSnapShot ? "-SNAPSHOT" : ""}-glsp.jar`
+);
+
+export async function activate(context: vscode.ExtensionContext): Promise<void> {
+  // Start server process using quickstart component
+  let serverProcess: GlspSocketServerLauncher | undefined;
+  const useIntegratedServer = JSON.parse(process.env.GLSP_INTEGRATED_SERVER ?? 'false');
+  if (!useIntegratedServer && process.env.GLSP_SERVER_DEBUG !== 'true') {
+      const additionalArgs = ['--fileLog', 'true', '--logDir', LOG_DIR];
+      if (process.env.GLSP_WEBSOCKET_PATH) {
+          additionalArgs.push('--webSocket');
+      }
+      serverProcess = new GlspSocketServerLauncher({
+          executable: JAVA_EXECUTABLE,
+          socketConnectionOptions: { port: JSON.parse(process.env.GLSP_SERVER_PORT || DEFAULT_SERVER_PORT) },
+          additionalArgs,
+          logging: true
+      });
+
+      context.subscriptions.push(serverProcess);
+      await serverProcess.start();
+  }
+
+  // Wrap server with quickstart component
+  const myServer = new SocketGlspVscodeServer({
+            clientId: 'glsp.my-diagram',
+            clientName: 'my-diagram',
+            connectionOptions: {
+                port: serverProcess?.getPort() || JSON.parse(process.env.GLSP_SERVER_PORT || DEFAULT_SERVER_PORT),
+                path: process.env.GLSP_WEBSOCKET_PATH
+            }
+        });
+
+
+  // Initialize GLSP-VSCode connector with server wrapper
+  const glspVscodeConnector = new GlspVscodeConnector({
+    server: myServer,
+    logging: true,
+  });
+
+  const customEditorProvider = vscode.window.registerCustomEditorProvider(
+    "my-diagram",
+    new myEditorProvider(context, glspVscodeConnector),
+    {
+      webviewOptions: { retainContextWhenHidden: true },
+      supportsMultipleEditorsPerDocument: false,
+    }
+  );
+
+  context.subscriptions.push(
+    myServer,
+    glspVscodeConnector,
+    customEditorProvider
+  );
+  bpmnServer.start();
+
+  configureDefaultCommands({
+    extensionContext: context,
+    connector: glspVscodeConnector,
+    diagramPrefix: "my-diagram",
+  });
+
+}
+
+
+```
+
 The `activate` function is the entry point of the VS Code [extension anatomy](https://code.visualstudio.com/api/get-started/extension-anatomy). This code is running in the extension host of VS Code and starts two things:
 
  * the GLSP server (either as a nodejs process communicating via IPC or any other process communicating via socket - e.g. a Java Server)
@@ -168,10 +327,89 @@ The `activate` function is the entry point of the VS Code [extension anatomy](ht
 
 So in contrast to Theia, there is another indirection necessary, because of the extension host and the webview.
 
+The example code  uses a external Java Server wich is connected via webSocket. This could also be changed to a NodeJs Server as you can find in the [workflow example](https://github.com/eclipse-glsp/glsp-vscode-integration/tree/master/example/workflow)
+
+**Note:** the first import here must be always `import "reflect-metadata"`. The order is important here.  
+
+
 
 The file `index.ts` is just to activate the extension.
+
+```javascript
+import "reflect-metadata";
+
+import * as vscode from "vscode";
+import { activate as extensionActivate } from "./open-bpmn-extension";
+
+export function activate(context: vscode.ExtensionContext): Promise<void> {
+  console.log("Launching Open-BPMN GLSP Server...");
+  return extensionActivate(context);
+}
+```
 
 ### The Extension Configuration 
 
 All the configuration is done in the file `package.json`. This file describes custom keybindings, menus and commands. 
+
+### The Webpack
+
+The extension module also contains a webpack configuration.  
+
+```javascript
+'use strict';
+
+const path = require('path');
+const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
+const nodeModules = path.resolve(__dirname, '../node_modules');
+
+/**@type {import('webpack').Configuration}*/
+const config = {
+    target: 'node',
+
+    entry: path.resolve(__dirname, 'src/my-extension.ts'),
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'my-extension.js',
+        libraryTarget: 'commonjs2'
+    },
+    devtool: 'source-map',
+    externals: {
+        vscode: 'commonjs vscode'
+    },
+    mode: 'development',
+    resolve: {
+        extensions: ['.ts', '.js']
+    },
+    module: {
+        rules: [
+            {
+                test: /\.ts$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'ts-loader'
+                    }
+                ]
+            }
+        ]
+    },
+    plugins: [
+        new CopyPlugin({
+            patterns: [                             
+                {
+                    from: path.resolve(__dirname, '..', 'webview', 'dist')
+                }
+            ]
+        })
+    ],
+    ignoreWarnings: [/Can't resolve .* in '.*ws\/lib'/],
+    performance: {
+        hints: false
+    }
+};
+
+module.exports = config;
+```
+
 

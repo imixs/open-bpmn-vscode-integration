@@ -18,6 +18,7 @@
 // The import "reflect-metadata" in the entry point class of this component
 // is needed to make the extension working correctly.  
 import 'reflect-metadata';
+
 import { launch } from './app';
 
 launch();
