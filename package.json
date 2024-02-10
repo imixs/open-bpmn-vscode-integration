@@ -1,7 +1,6 @@
 {
   "version": "1.1.0",
   "private": true,
-
   "scripts": {
     "all": "yarn install && yarn lint",
     "build": "lerna run build",
@@ -12,16 +11,16 @@
     "prepare": "lerna run prepare",
     "watch": "lerna run --parallel watch"
   },
-
   "workspaces": [
     "webview",
     "extension"
   ],
-
   "resolutions": {
-   
+    "@open-bpmn/open-bpmn-glsp": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-glsp/",
+    "@open-bpmn/open-bpmn-model": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-model/",
+    "@open-bpmn/open-bpmn-properties": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-properties/",
     "string-width": "4.2.3"
-  },  
+  },
   "devDependencies": {
     "@eclipse-glsp/dev": "~2.0.0",
     "@types/node": "16",

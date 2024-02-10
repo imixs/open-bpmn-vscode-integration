@@ -11,45 +11,59 @@ The origin GLSP examples can be found here:
 
 
 
-
-
 ## 1) Project Structure
 
-First of all you VS-Code integration project should provide the following directory structure:
+Most important for a successful VS-Code integration is your project structure. In the following I assume that you have two Projects:
+
+ - Your GLSP Diagram project (typically providing a Theia integration) 
+ - Your VS-Code Integration Porject
+
+Typically you use a monorepo where you place differenct modules into one Gir Repository. So you are working with two separate git repos providing the following directory structure:
 
 ```
-.
-├── my-vscode-integration
-│   ├── extension
-│   │   ├── src
-│   │   │   ├── index.ts
-│   │   │   ├── my-editor-provider.ts
-│   │   │   └── my-extension.ts
-│   │   ├── sever/
-│   │   ├── lerna.json
-│   │   ├── package.json
-│   │   ├── tsconfig.json
-│   │   ├── webpack.config.js
-│   │   ├── webpack.prod.js
-│   │   └── tsconfig.json
-│   ├── webview
-│   │   ├── src
-│   │   │   ├── app.ts
-│   │   │   └── index.ts
-│   │   ├── package.json
-│   │   ├── tsconfig.json
-│   │   ├── webpack.config.js
-│   │   ├── webpack.prod.js
-│   │   └── tsconfig.json
-├── lerna.json
-├── package.json
+/git
+├── my-glsp-project/                          ┓
+│   ├── my-diagram-code/                      ┃                         
+│   │   ├── src/                              ┃
+│   │   │   ├── ....                          ┣▶ Your GLSP Diagram Core Project
+│   │   ├── package.json                      ┃
+│   │   └── ....                              ┃
+│   ├── my-diagram-theia/                     ┃
+│   └── ....                                  ┛ 
+│ 
+├── my-vscode-integration/                    ┓
+│   ├── extension/                            ┃
+│   │   ├── src/                              ┃
+│   │   │   ├── index.ts                      ┃
+│   │   │   ├── my-editor-provider.ts         ┃
+│   │   │   └── my-extension.ts               ┃
+│   │   ├── sever/                            ┃
+│   │   ├── lerna.json                        ┃
+│   │   ├── package.json                      ┣▶ Your VS-Code Integration Project
+│   │   ├── tsconfig.json                     ┃
+│   │   ├── webpack.config.js                 ┃
+│   │   ├── webpack.prod.js                   ┃
+│   │   └── tsconfig.json                     ┃
+│   ├── webview/                              ┃
+│   │   ├── src/                              ┃
+│   │   │   ├── app.ts                        ┃
+│   │   │   └── index.ts                      ┃
+│   │   ├── package.json                      ┃
+│   │   ├── tsconfig.json                     ┃
+│   │   ├── webpack.config.js                 ┃
+│   │   ├── webpack.prod.js                   ┃
+│   │   └── tsconfig.json                     ┃
+├── lerna.json                                ┃
+├── package.json                              ┛ 
 ```
 
-As you can see there are two modules: the /extension module and the /webview module
+As you can see that the vs-code integration project holds at least two modules: the `/extension module` and the `/webview module`
 
-The Root package.json file should at least contain the following `devDependencies`:
+### The devDependencies 
 
-```
+The root `package.json` file should at least contain the following `devDependencies`:
+
+```json
   "devDependencies": {
     "@eclipse-glsp/dev": "~2.0.0",
     "inversify": "6.0.2",
@@ -57,8 +71,24 @@ The Root package.json file should at least contain the following `devDependencie
     "typescript": "^5.2.2"
   },
 ```
-This ensures that you use the correct versions of typescript, eslint and prettier configuration.
-Consuming the `@eclipse-glsp/dev` package is the most straight forward approach as you don't have to worry about configuration
+This ensures, that you use the correct versions of typescript, eslint and prettier configuration.
+Consuming the `@eclipse-glsp/dev` package is the most straight forward approach as you don't have to worry about configuration.
+
+
+
+### The resolutions
+
+Also a very important part of your project setup is the `resolutions` section of your root `package.json` file:
+
+```json
+  "resolutions": {
+    "@my-glsp-project/my-diagram-code": "file:./../my-glsp-project/my-diagram-code/",
+    "string-width": "4.2.3"
+  },
+```
+
+This entry directly links your glsp core project into your vs-code integration porject. Which means you can now both projects in parallel within your local dev environment. 
+
 
 ## 2) The Webview Module
 
@@ -400,7 +430,7 @@ const config = {
                 {
                     from: path.resolve(__dirname, '..', 'webview', 'dist')
                 }
-            ]
+            ]ya
         })
     ],
     ignoreWarnings: [/Can't resolve .* in '.*ws\/lib'/],
@@ -411,5 +441,16 @@ const config = {
 
 module.exports = config;
 ```
+
+
+# Linking Package
+
+https://medium.com/@jsilvax/a-workflow-guide-for-lerna-with-yarn-workspaces-60f97481149d 
+
+
+To Install `lerna` run
+
+
+  $ npm install --global lerna
 
 
