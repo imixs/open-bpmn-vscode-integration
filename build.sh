@@ -12,13 +12,13 @@ rm -R extension/node_modules
 rm -R extension/dist
 
 echo "==> build webview..."
-#yarn install
-yarn all
+yarn install
+#yarn all
 
-#echo "==> build VSIX extension..."
-#cd extension
+echo "==> build VSIX extension..."
+cd extension
 #yarn install
-#vsce package --yarn
-#cd ../..
+vsce package --yarn
+cd ../..
 
 echo "==> build completed!"

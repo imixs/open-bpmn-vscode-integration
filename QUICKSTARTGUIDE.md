@@ -87,7 +87,7 @@ Also a very important part of your project setup is the `resolutions` section of
   },
 ```
 
-This entry directly links your glsp core project into your vs-code integration porject. Which means you can now both projects in parallel within your local dev environment. 
+This entry directly links your glsp core project into your vs-code integration porject. Which means you can now develop both projects in parallel as long as both projects are in the same local git repository. 
 
 
 ## 2) The Webview Module
