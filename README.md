@@ -113,7 +113,7 @@ This s VS-Code launch option starts the server and the VS-Code extension. This s
 
 To build the webview only run from the project root:
 
-    $ yarn install
+    $ yarn install --yarn
 
 ## Package VS-Code Extension
 
@@ -124,7 +124,7 @@ To package the VS-Code Extension into a `.vsix` file, you first have to install 
 To build the extension and create the VSIX file run:
 
     $ cd extension
-    $ yarn install
+    $ yarn install --yarn
     $ vsce package --yarn
 
 You can check the result file with :
@@ -167,7 +167,7 @@ login via the vsce tool. You will be asked for your personal access token:
 You can now publish the Open-BPMN extension using vsce with the publish command:
 
     $ cd extension/
-    $ vsce publish
+    $ vsce publish --yarn
 
 The publishing process can take some minutes. To verify the status open:
 

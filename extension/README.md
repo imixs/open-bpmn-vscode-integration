@@ -11,8 +11,15 @@ Open Source Workflow Engines like [Imixs-Workflow](https://www.imixs.org) integr
 
 Learn more about Open BPMN on the [project site](https://www.open-bpmn.org).
 
-# Java 11 Support
+# Java 17 Support
 
-**Note:** To use Open-BPMN in your Visual Studio Code, Java 11 or a higher version need to be installed on your machine.
+**Note:** To use Open-BPMN in your Visual Studio Code, Java 17 or a higher version need to be installed on your machine.
 
-To install Java 11 or a higher version, you can download it from the [Microsoft Download Page](https://learn.microsoft.com/en-us/java/openjdk/download) or you can install it from your operating system's package manager. If you have any questions you will find help in the [Open-BPMN Discussion Forum](https://github.com/imixs/open-bpmn/discussions).
+To install Java 17 or a higher version, you can download it from the [Microsoft Download Page](https://learn.microsoft.com/en-us/java/openjdk/download) or you can install it from your operating system's package manager. If you have any questions you will find help in the [Open-BPMN Discussion Forum](https://github.com/imixs/open-bpmn/discussions).
+
+## Java 11 Support
+
+If you can't use Java 17 you can install an older version manually from a .vsix file:
+
+https://github.com/imixs/open-bpmn-vscode-integration/releases/tag/open-bpmn-vscode-integration-1.0.23
+
