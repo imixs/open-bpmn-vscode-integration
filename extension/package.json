@@ -1,7 +1,7 @@
 {
   "name": "open-bpmn-vscode-extension",
   "displayName": "Open-BPMN",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": "true",
   "description": "Free BPMN 2.0 modeling tool to create and edit .bpmn files",
   "categories": [
@@ -36,17 +36,17 @@
   "main": "./dist/open-bpmn-extension",
   "files": [
     "dist"
-  ],  
+  ],
   "scripts": {
     "build": "tsc && yarn bundle",
-    "bundle": "webpack",    
-    "bundle:prod": "webpack --config ./webpack.prod.js",    
+    "bundle": "webpack",
+    "bundle:prod": "webpack --config ./webpack.prod.js",
     "clean": "rimraf lib tsconfig.tsbuildinfo dist",
     "lint": "eslint --ext .ts,.tsx ./src",
     "lint:ci": "yarn lint -o eslint.xml -f checkstyle",
     "package": "vsce package --yarn",
     "prepare": "yarn clean && yarn build",
-    "watch": "tsc -w"     
+    "watch": "tsc -w"
   },
   "contributes": {
     "commands": [
@@ -156,7 +156,7 @@
   ],
   "dependencies": {
     "@vscode/codicons": "^0.0.25"
-  },  
+  },
   "devDependencies": {
     "@eclipse-glsp/vscode-integration": "2.1.0-next.74",
     "@vscode/vsce": "^2.19.0",
@@ -165,7 +165,7 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-merge": "^5.9.0",
-    "open-bpmn-vscode-webview": "1.1.0"   
+    "open-bpmn-vscode-webview": "1.1.1"
   },
   "engines": {
     "java": ">=11.0.0",
