@@ -34,9 +34,6 @@
   ],
   "publisher": "open-bpmn",
   "main": "./dist/open-bpmn-extension",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "tsc && yarn bundle",
     "bundle": "webpack",
