@@ -36,6 +36,7 @@
       <imixs:value><![CDATA[org.imixs.workflow.engine.plugins.IntervalPlugin]]></imixs:value>
       <imixs:value><![CDATA[org.imixs.workflow.engine.plugins.EventLogPlugin]]></imixs:value>
     </imixs:item>
+    <open-bpmn:auto-align/>
   </bpmn2:extensionElements>
   <bpmn2:signal id="Signal_1" name="org.imixs.ml.workflow.MLAdapter"/>
   <bpmn2:signal id="Signal_2" name="org.imixs.archive.documents.OCRDocumentAdapter"/>
@@ -599,9 +600,8 @@ if (workitem.getItemValueString('txtcomment')=='') {
       <bpmn2:incoming>sequenceFlow_MKDlnQ</bpmn2:incoming>
     </bpmn2:task>
     <bpmn2:dataObject id="DataObject_2" name="Debug Form">
-      <bpmn2:documentation id="Documentation_8"><![CDATA[<?xml version="1.0"?>
+      <bpmn2:documentation id="Documentation_8" open-bpmn:file-link="file://form.xml"><![CDATA[<?xml version="1.0"?>
 <imixs-form>
-
     <imixs-subform label="Basic"  >
         <imixs-form-section columns="1" label="Formular">
             <item name="debug.name" type="text"  label="Name:" />
@@ -1719,6 +1719,8 @@ result.isValid=true;
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="SequenceFlow_52" id="BPMNEdge_SequenceFlow_53" sourceElement="BPMNShape_IntermediateCatchEvent_17" targetElement="BPMNShape_IntermediateThrowEvent_1">
         <bpmndi:BPMNLabel id="BPMNLabel_115"/>
+        <di:waypoint x="1083.0" y="925.0"/>
+        <di:waypoint x="1157.0" y="925.0"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="SequenceFlow_2" id="BPMNEdge_SequenceFlow_3" sourceElement="BPMNShape_Task_5" targetElement="BPMNShape_EventBasedGateway_3">
         <bpmndi:BPMNLabel id="BPMNLabel_5"/>
