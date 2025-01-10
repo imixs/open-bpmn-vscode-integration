@@ -98,16 +98,15 @@ To build the project and generate a VSIX extension file run:
 
     $ ./build.sh
 
-With in VS-Code you will find two differnt launch options that can be used during development. 
+With in VS-Code you will find two differnt launch options that can be used during development.
 
 **Open-BPMN VS-Code Extension (without Server)**
 
 This VS-Code launch option expects that you have already started the Open-BPMN server host manually within VSode. This option is good for testing and debugging the server part
 
-**Open-BPMN VS-Code Extension** 
+**Open-BPMN VS-Code Extension**
 
 This s VS-Code launch option starts the server and the VS-Code extension. This simulates how the extension will work without exernal servers. The extension starts the configured glsp-sever part form a .jar file.
-
 
 ## Build the Webview
 
@@ -183,17 +182,16 @@ List version
 
 Tag
 
-    $ git tag -a open-bpmn-vscode-integration-1.1.10  -m "next version"
-	$ git push origin open-bpmn-vscode-integration-1.1.10
-   
-After creating the tag, upgrade the version numbers in the package.json and lerna.json files!
+    $ git tag -a open-bpmn-vscode-integration-1.1.11  -m "next version"
+    $ git push origin open-bpmn-vscode-integration-1.1.11
 
+After creating the tag, upgrade the version numbers in the package.json and lerna.json files!
 
 # VSCE
 
 To build the project you need to install the [vsce](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) tool first.
 
-Run: 
+Run:
 
-    $ npm install -g typescript 
+    $ npm install -g typescript
     $ npm install -g @vscode/vsce
