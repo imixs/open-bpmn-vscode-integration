@@ -33,6 +33,10 @@
   fill: var(--vscode-titleBar-activeForeground);
 }
 
+.sprotty-issue.sprotty-warning {
+  fill: var(--vscode-problemsWarningIcon-foreground);
+}
+
 .pool>.sprotty-node {
   fill: var(--vscode-sideBar-background);
   stroke: var(--vscode-focusBorder);
