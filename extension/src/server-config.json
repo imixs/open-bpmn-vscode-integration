@@ -3,7 +3,7 @@
   "snapshotRepository": "https://oss.sonatype.org/content/repositories/snapshots/",
   "groupId": "org.imixs.bpmn",
   "artifactId": "imixs-open-bpmn.server",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "isSnapShot": true,
   "classifier": "glsp"
 }

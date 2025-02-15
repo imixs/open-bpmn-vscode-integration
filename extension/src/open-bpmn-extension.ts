@@ -101,7 +101,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
   /* add properties command */
   context.subscriptions.push(
     vscode.commands.registerCommand("bpmn.showProperties", () => {
-      glspVscodeConnector.sendActionToActiveClient(
+      glspVscodeConnector.dispatchAction(
         BPMNPropertyPanelToggleAction.create()
       );
     })

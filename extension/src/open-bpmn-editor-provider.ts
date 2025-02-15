@@ -49,7 +49,7 @@ export default class BPMNlowEditorProvider extends GlspEditorProvider {
     );
 
     webviewPanel.webview.options = {
-      enableScripts: true,
+      enableScripts: true
     };
 
     webviewPanel.webview.html = `

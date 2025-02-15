@@ -19,18 +19,20 @@
     "@open-bpmn/open-bpmn-glsp": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-glsp/",
     "@open-bpmn/open-bpmn-model": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-model/",
     "@open-bpmn/open-bpmn-properties": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-properties/",
-    "string-width": "4.2.3"
+    "string-width": "4.2.3",
+    "**/vscode-jsonrpc": "8.2.0"
+
   },
   "devDependencies": {
-    "@eclipse-glsp/dev": "~2.0.0",
-    "@types/node": "16",
+    "@eclipse-glsp/dev": "2.3.0",
+    "@types/node": "18.x",
     "@types/vscode": "^1.54.0",
     "inversify": "6.0.2",
-    "lerna": "^6.6.2",
-    "typescript": "^5.2.2"
+    "lerna": "^8.1.7",
+    "typescript": "^5.5.3"
   },
   "engines": {
-    "node": ">=16.11.0",
-    "yarn": ">=1.7.0 <2.x.x"
+    "node": ">=16.18",
+    "yarn": ">=1.7.0 <2"
   }
 }

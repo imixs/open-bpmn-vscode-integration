@@ -2,8 +2,7 @@
   "extends": "@eclipse-glsp/ts-config",
   "compilerOptions": {
     "rootDir": "src",
-    "outDir": "lib",
-    "resolveJsonModule": true
+    "outDir": "lib"
   },
   "include": [
     "src",
