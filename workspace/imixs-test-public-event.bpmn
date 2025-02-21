@@ -1,11 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:BPMN2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:imixs="http://www.imixs.org/bpmn2" xmlns:open-bpmn="http://open-bpmn.org/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="org.openbpmn" exporterVersion="1.0.0" targetNamespace="http://org.openbpmn">
+  <bpmn2:extensionElements>
+    <open-bpmn:auto-align/>
+  </bpmn2:extensionElements>
   <bpmn2:process id="process_1" name="Default Process" processType="Public">
     <bpmn2:documentation id="documentation_mxAnbQ"/>
     <bpmn2:task id="task_Pu621w" imixs:processid="100" name="Task-1">
       <bpmn2:extensionElements>
         <imixs:item name="form.definition" type="xs:string">
-          <imixs:value open-bpmn:file-link="file://form.xml"><![CDATA[<myform>some test 32</myform>]]></imixs:value>
+          <imixs:value open-bpmn:file-link="file://form.xml"><![CDATA[<?xml version="1.0"?>
+<imixs-form>
+    <imixs-subform label="Basic"  >
+        <imixs-form-section columns="1" label="Formular">
+            <item name="debug.name" type="text"  label="Name:" />
+        </imixs-form-section>
+        <imixs-form-section columns="2">
+            <item name="debug.user" type="custom" path="userinput"  label="Responsible2:" />
+            <item name="debug.team" type="custom" path="userlistinput"  label="Team:" />
+            <item name="invoice.ref" type="custom" path="workitemlink"  label="Invoice No.:" options="($workflowgroup:Rechnungseingang)" />
+            <item  type="custom" path="workitemlink"  label="Order No.:" options="($workflowgroup:Bedarfsmeldung)" />
+
+
+            <item name="debug.zip" type="text"  label="ZIP:" span="2" />
+            <item name="debug.city" type="text"  label="City:" span="6" />
+            <item name="debug.country" type="text"  label="Country:" span="4" />
+        </imixs-form-section>
+    </imixs-subform>
+    <imixs-subform label="Signature" readonly="false">
+        <imixs-form-section columns="1" label="">
+            <item name="debug.description" type="html"  label="Beschreibung:" />
+            <item name="debug.signature" type="custom" path="signature_pad" required="true" label="Unterschrift:" />
+        </imixs-form-section>
+        <imixs-form-section columns="2">
+            <item name="debug.number" type="date"  label="Termin:" />
+        </imixs-form-section>
+    </imixs-subform>
+
+    <imixs-subform label="Dispatch" readonly="false">
+        <imixs-form-section label="" path="sub_dispatch" />
+    </imixs-subform>
+
+</imixs-form>
+]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:documentation id="documentation_03Ik3g"/>
