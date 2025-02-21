@@ -1,7 +1,7 @@
 {
   "name": "open-bpmn-vscode-extension",
   "displayName": "Open-BPMN",
-  "version": "1.1.14",
+  "version": "1.1.15",
   "private": "true",
   "description": "Free BPMN 2.0 modeling tool to create and edit .bpmn files",
   "categories": [
@@ -171,7 +171,7 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-merge": "^5.9.0",
-    "open-bpmn-vscode-webview": "1.1.14"
+    "open-bpmn-vscode-webview": "1.1.15"
   },
   "engines": {
     "java": ">=11.0.0",
