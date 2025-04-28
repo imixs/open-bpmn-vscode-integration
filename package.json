@@ -1,5 +1,5 @@
 {
-  "version": "1.1.18",
+  "version": "1.1.19",
   "private": true,
   "scripts": {
     "all": "yarn install && yarn lint",
@@ -21,7 +21,6 @@
     "@open-bpmn/open-bpmn-properties": "file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-properties/",
     "string-width": "4.2.3",
     "**/vscode-jsonrpc": "8.2.0"
-
   },
   "devDependencies": {
     "@eclipse-glsp/dev": "2.3.0",
