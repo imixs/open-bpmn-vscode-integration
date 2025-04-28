@@ -12,9 +12,11 @@ You will find general Information about the **Open-BPMN Modeling Tool** [here](h
 
 # Installation
 
-Open-BPMN can be installed into Visual Studio Code from the latest VSIX extension file:
+Open-BPMN can be installed in various ways
 
-<h2 align="center"><a href="https://github.com/imixs/open-bpmn-vscode-integration/releases/download/open-bpmn-vscode-integration-1.0.6/open-bpmn-vscode-extension-1.0.6.vsix" >Download: open-bpmn-vscode-extension-1.0.6.vsix</a></h2>
+- for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=open-bpmn.open-bpmn-vscode-extension) you can install it directly from the [extensions marketplace](https://marketplace.visualstudio.com/items?itemName=open-bpmn.open-bpmn-vscode-extension) - search for 'Open-BPMN'.
+- for [Theia Platform](https://theia-ide.org/) you can install it from the [Open VSC Registry](https://open-vsx.org/extension/open-bpmn/open-bpmn-vscode-extension)
+- or you can install it as a VSIX file from the [latest release on Github](https://github.com/imixs/open-bpmn-vscode-integration/releases)
 
 # Development
 
