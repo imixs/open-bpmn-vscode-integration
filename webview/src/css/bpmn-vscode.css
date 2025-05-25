@@ -72,6 +72,14 @@
   outline-color: var(--vscode-editor-foreground);
 }
 
+.dataObject>.sprotty-icon>path {
+    fill: var(--vscode-titleBar-activeBackground);
+}
+
+.dataObject .symbol path {
+    fill: var(--vscode-foreground);
+}
+
 .message>.sprotty-node {
   stroke: var(--vscode-focusBorder);
   outline-color: var(--vscode-editor-foreground);
