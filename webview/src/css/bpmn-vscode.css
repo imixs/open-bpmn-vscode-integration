@@ -188,3 +188,17 @@
 .BPMNLabel>.sprotty-node.mouseover {
   fill: var(--vscode-sideBar-background);
 }
+
+
+.task>.sprotty-node {
+    fill: #84a1bd;
+    stroke: var(--vscode-foreground);
+}
+.subProcess>.sprotty-node {
+    fill: #84a1bdb3;
+    stroke: var(--vscode-foreground);
+}
+.callActivity>.sprotty-node { 
+    fill: #84a1bdb3;
+    stroke: var(--vscode-foreground);
+}
