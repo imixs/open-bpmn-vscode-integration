@@ -184,8 +184,8 @@ List version
 
 Tag
 
-    $ git tag -a open-bpmn-vscode-integration-1.1.26  -m "next version"
-    $ git push origin open-bpmn-vscode-integration-1.1.26
+    $ git tag -a open-bpmn-vscode-integration-1.1.27  -m "next version"
+    $ git push origin open-bpmn-vscode-integration-1.1.27
 
 After creating the tag, upgrade the version numbers in the package.json and lerna.json files!
 
