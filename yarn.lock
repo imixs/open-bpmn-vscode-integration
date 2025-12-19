@@ -1077,7 +1077,7 @@
   dependencies:
     "@octokit/openapi-types" "^24.2.0"
 
-"@open-bpmn/open-bpmn-glsp@1.2.8", "@open-bpmn/open-bpmn-glsp@file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-glsp/":
+"@open-bpmn/open-bpmn-glsp@1.2.9", "@open-bpmn/open-bpmn-glsp@file:./../open-bpmn/open-bpmn.glsp-client/open-bpmn-glsp/":
   version "1.2.9"
   dependencies:
     "@eclipse-glsp/client" "2.4.0"
