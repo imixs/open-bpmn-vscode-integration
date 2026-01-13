@@ -15,7 +15,7 @@ You will find general Information about the **Open-BPMN Modeling Tool** [here](h
 Open-BPMN can be installed in various ways
 
 - for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=open-bpmn.open-bpmn-vscode-extension) you can install it directly from the [extensions marketplace](https://marketplace.visualstudio.com/items?itemName=open-bpmn.open-bpmn-vscode-extension) - search for 'Open-BPMN'.
-- for [Theia Platform](https://theia-ide.org/) you can install it from the [Open VSC Registry](https://open-vsx.org/extension/open-bpmn/open-bpmn-vscode-extension)
+- for [Theia Platform](https://theia-ide.org/) you can install it from the [Open VSX Registry](https://open-vsx.org/extension/open-bpmn/open-bpmn-vscode-extension)
 - or you can install it as a VSIX file from the [latest release on Github](https://github.com/imixs/open-bpmn-vscode-integration/releases)
 
 # Development
@@ -184,8 +184,8 @@ List version
 
 Tag
 
-    $ git tag -a open-bpmn-vscode-integration-1.1.27  -m "next version"
-    $ git push origin open-bpmn-vscode-integration-1.1.27
+    $ git tag -a open-bpmn-vscode-integration-1.1.28  -m "next version"
+    $ git push origin open-bpmn-vscode-integration-1.1.28
 
 After creating the tag, upgrade the version numbers in the package.json and lerna.json files!
 
@@ -197,3 +197,8 @@ Run:
 
     $ npm install -g typescript
     $ npm install -g @vscode/vsce
+
+## Publish Open-BPMN on Open VSX Registry
+
+`vsix` extensions can also be used in [Theia IDE](https://theia-ide.org/).
+To publish the latest Extension version on [open-vsx.org](https://open-vsx.org/) simply login and upload it manually.
