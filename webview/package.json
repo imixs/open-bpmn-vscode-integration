@@ -39,7 +39,7 @@
     "watch": "tsc -w"
   },
   "devDependencies": {
-    "@open-bpmn/open-bpmn-glsp": "1.2.9",
+    "@open-bpmn/open-bpmn-glsp": "1.3.0",
     "@eclipse-glsp/vscode-integration-webview": "2.4.0",
     "@vscode/codicons": "^0.0.25",
     "circular-dependency-plugin": "^5.2.2",
