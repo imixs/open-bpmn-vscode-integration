@@ -66,12 +66,6 @@
         "enablement": "activeCustomEditorId == 'bpmn-diagram'"
       },
       {
-        "command": "bpmn.showProperties",
-        "title": "BPMN Properties",
-        "category": "BPMN Diagram",
-        "enablement": "activeCustomEditorId == 'bpmn-diagram' && bpmn.editorSelectedElementsAmount == 1"
-      },
-      {
         "command": "bpmn.exportAsSVG",
         "title": "Export as SVG",
         "category": "BPMN Diagram",
@@ -110,12 +104,6 @@
         "mac": "alt+a",
         "command": "bpmn.selectAll",
         "when": "activeCustomEditorId == 'bpmn-diagram'"
-      },
-      {
-        "key": "alt+p",
-        "mac": "alt+p",
-        "command": "bpmn.showProperties",
-        "when": "activeCustomEditorId == 'bpmn-diagram' && bpmn.editorSelectedElementsAmount == 1"
       }
     ],
     "menus": {
@@ -123,11 +111,6 @@
         {
           "submenu": "bpmn.editor.title",
           "group": "bookmarks"
-        },
-        {
-          "command": "bpmn.showProperties",
-          "group": "navigation",
-          "when": "activeCustomEditorId == 'bpmn-diagram' && bpmn.editorSelectedElementsAmount == 1"
         }
       ],
       "bpmn.editor.title": [
